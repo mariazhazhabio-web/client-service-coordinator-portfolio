@@ -1,0 +1,245 @@
+{
+  "name": "[DEMO] Automatic task creation",
+  "nodes": [
+    {
+      "id": "8d1362a0-097f-4259-afb8-a0aaa4a30473",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        40
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 220,
+        "content": "## Automatic task creation\n**Portfolio demonstration. Fictional test data only.**\n\nTrigger: New row in 'Service_Requests' sheet\n\n1. Replace every MOCK credential with your own *test* accounts.\n2. Replace YOUR_TEST_* IDs with test Sheets, Calendars, and Trello lists.\n3. Gmail nodes are disabled. Enable them only with a test inbox.\n4. Use \"Test: run manually\" to run with mock data.\n\nNot affiliated with any financial firm. Do not connect real client data."
+      }
+    },
+    {
+      "id": "66f92a18-0116-49df-9c37-460447f5dbe2",
+      "name": "Test: run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        520
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "41d2c883-6241-43f3-80d1-210f5a24bc91",
+      "name": "Mock test data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        520
+      ],
+      "parameters": {
+        "jsCode": "// FICTIONAL TEST DATA ONLY\nreturn [\n  { json: { 'Full Name': 'Olivia Test', Email: 'olivia.test@example.com', Phone: '805-555-0100', 'Ref #': 'SR-TEST-1201', Category: 'Address Change', Priority: 'Medium', Status: 'In Progress', 'Date Received': '2026-01-05', 'Target Date': '2026-01-09', 'Resolution Date': '', Client: 'Olivia Test', Owner: 'Coordinator', Purpose: 'Outstanding documents', 'Next Follow-up': '2026-01-08', Requirement: 'Signed form (mock)' } },\n  { json: { 'Full Name': 'Ben Sample', Email: 'ben.sample@example.com', Phone: '805-555-0101', 'Ref #': 'SR-TEST-1202', Category: 'Beneficiary Update', Priority: 'High', Status: 'Completed', 'Date Received': '2026-01-02', 'Target Date': '2026-01-06', 'Resolution Date': '2026-01-05', Client: 'Ben Sample', Owner: 'Operations', Purpose: 'Request status update', 'Next Follow-up': '2026-01-07', Requirement: 'Advisor review' } }\n];"
+      }
+    },
+    {
+      "id": "481acf17-26dd-4a29-a5ae-1680082a7e64",
+      "name": "New service request row",
+      "position": [
+        260,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Service_Requests",
+          "mode": "name"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    },
+    {
+      "id": "4187e9cb-fff6-403c-922c-5c4d77119727",
+      "name": "Apply category checklist",
+      "position": [
+        500,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const CHECKLISTS = {\n  'Address Change': ['Signed address change form', 'Update CRM', 'Confirm with client'],\n  'Beneficiary Update': ['Signed beneficiary form', 'Advisor review', 'Confirm with client'],\n  'New Account Application': ['Forms complete', 'Signatures', 'Advisor approval', 'Submit', 'Confirm'],\n};\nreturn $input.all().map(i => ({ json: { ...i.json, checklist: CHECKLISTS[i.json.Category] ?? ['Process request', 'Confirm with client'] } }));"
+      }
+    },
+    {
+      "id": "a9883839-1a87-45bd-9d18-d031118b6df0",
+      "name": "Set due date by priority",
+      "position": [
+        740,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const DAYS = { High: 2, Medium: 5, Low: 7 };\nconst addBusinessDays = (d, n) => { const r = new Date(d); while (n > 0) { r.setDate(r.getDate() + 1); if (r.getDay() % 6 !== 0) n--; } return r; };\nreturn $input.all().map(i => ({ json: { ...i.json, dueDate: addBusinessDays(new Date(), DAYS[i.json.Priority] ?? 5).toISOString().slice(0, 10) } }));"
+      }
+    },
+    {
+      "id": "122a2017-5d67-4a95-a2d6-6c96f07048a5",
+      "name": "Create Trello card",
+      "position": [
+        980,
+        300
+      ],
+      "type": "n8n-nodes-base.trello",
+      "typeVersion": 1,
+      "parameters": {
+        "listId": "YOUR_TEST_TRELLO_LIST_ID",
+        "name": "={{ ($json['Ref #'] ?? 'TEST') + ' · ' + ($json['Category'] ?? 'Request') }}",
+        "description": "={{ 'Due: ' + ($json.dueDate ?? '') + '\\nChecklist: ' + ($json.checklist ?? []).join(', ') }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "trelloApi": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_TRELLO (replace)"
+        }
+      }
+    },
+    {
+      "id": "fe47495c-aca6-4ea9-8f37-62b8e9ba567d",
+      "name": "Write back card link",
+      "position": [
+        1220,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "In Progress",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "Ref #"
+          ]
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "New service request row": {
+      "main": [
+        [
+          {
+            "node": "Apply category checklist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apply category checklist": {
+      "main": [
+        [
+          {
+            "node": "Set due date by priority",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set due date by priority": {
+      "main": [
+        [
+          {
+            "node": "Create Trello card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Trello card": {
+      "main": [
+        [
+          {
+            "node": "Write back card link",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test: run manually": {
+      "main": [
+        [
+          {
+            "node": "Mock test data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock test data": {
+      "main": [
+        [
+          {
+            "node": "Apply category checklist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "note": "Independent portfolio demonstration by Maria Zha-Zha Cornillez Bio. Mock credentials."
+  },
+  "pinData": {}
+}

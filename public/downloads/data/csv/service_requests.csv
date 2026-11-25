@@ -1,0 +1,41 @@
+ref,clientId,clientName,category,received,assignedTo,priority,target,status,pending,followUps,resolved
+SR-2026-1201,CL-1007,Chloe Holloway,New Account Application,2026-11-22,Marcus Lee,Medium,2026-11-29,Received,Signed application form; Proof of address (mock); Client signature on disclosure acknowledgment,1,
+SR-2026-1202,CL-1022,Isaac Westbrook,Address Change,2026-11-17,Hannah Brooks,Low,2026-11-21,Pending Home Office,Signed address change form,2,
+SR-2026-1203,CL-1019,Ava Thornton,Beneficiary Update,2026-11-19,Hannah Brooks,High,2026-11-29,Completed,,2,2026-11-25
+SR-2026-1204,CL-1008,Lucas Iverson,Contact Information Update,2026-10-16,Marcus Lee,Medium,2026-10-24,Completed,,2,2026-10-22
+SR-2026-1205,CL-1007,Chloe Holloway,Account Maintenance,2026-10-19,Priya Natarajan,High,2026-10-24,Completed,,2,2026-10-26
+SR-2026-1206,CL-1007,Chloe Holloway,Transfer Paperwork,2026-11-22,Priya Natarajan,Low,2026-12-02,Pending Client,Signed transfer form; Recent statement copy (mock),2,
+SR-2026-1207,CL-1001,Olivia Bennett,Document Request,2026-11-19,Priya Natarajan,Low,2026-11-26,In Progress,Document retrieval from archive,2,
+SR-2026-1208,CL-1004,Nathan Ellison,Systematic Contribution Setup,2026-11-19,Client Service Coordinator,High,2026-11-28,Completed,,2,2026-11-25
+SR-2026-1209,CL-1011,Isabel Langford,New Account Application,2026-11-15,Marcus Lee,High,2026-11-20,Pending Home Office,Signed application form; Proof of address (mock),2,
+SR-2026-1210,CL-1003,Grace Delgado,Address Change,2026-11-17,Hannah Brooks,Medium,2026-11-21,In Progress,Signed address change form,2,
+SR-2026-1211,CL-1018,Julian Sterling,Beneficiary Update,2026-11-24,Client Service Coordinator,High,2026-12-03,In Progress,Signed beneficiary designation form,2,
+SR-2026-1212,CL-1007,Chloe Holloway,Contact Information Update,2026-11-16,Marcus Lee,Low,2026-11-23,Received,Client verbal confirmation logged,1,
+SR-2026-1213,CL-1019,Ava Thornton,Account Maintenance,2026-11-17,Hannah Brooks,Medium,2026-11-25,Completed,,2,2026-11-25
+SR-2026-1214,CL-1003,Grace Delgado,Transfer Paperwork,2026-11-25,Hannah Brooks,Medium,2026-12-03,Received,Signed transfer form,1,
+SR-2026-1215,CL-1019,Ava Thornton,Document Request,2026-11-23,Priya Natarajan,Medium,2026-12-03,In Progress,Document retrieval from archive,2,
+SR-2026-1216,CL-1013,Mia Northcott,Systematic Contribution Setup,2026-11-16,Hannah Brooks,Medium,2026-11-24,Completed,,2,2026-11-23
+SR-2026-1217,CL-1003,Grace Delgado,New Account Application,2026-10-31,Hannah Brooks,Medium,2026-11-06,Completed,,2,2026-11-05
+SR-2026-1218,CL-1024,Miles Abernathy,Address Change,2026-11-07,Client Service Coordinator,Medium,2026-11-13,Completed,,2,2026-11-13
+SR-2026-1219,CL-1017,Lily Redfield,Beneficiary Update,2026-10-12,Client Service Coordinator,Low,2026-10-20,Completed,,2,2026-10-22
+SR-2026-1220,CL-1019,Ava Thornton,Contact Information Update,2026-10-12,Marcus Lee,High,2026-10-19,Completed,,2,2026-10-18
+SR-2026-1221,CL-1002,Benjamin Calloway,Account Maintenance,2026-10-17,Client Service Coordinator,Low,2026-10-24,Completed,,2,2026-10-23
+SR-2026-1222,CL-1017,Lily Redfield,Transfer Paperwork,2026-11-25,Hannah Brooks,Medium,2026-11-29,In Progress,Signed transfer form,2,
+SR-2026-1223,CL-1001,Olivia Bennett,Document Request,2026-11-18,Marcus Lee,Medium,2026-11-24,Received,Document retrieval from archive,1,
+SR-2026-1224,CL-1004,Nathan Ellison,Systematic Contribution Setup,2026-11-21,Client Service Coordinator,Low,2026-11-30,In Progress,Signed authorization form,2,
+SR-2026-1225,CL-1017,Lily Redfield,New Account Application,2026-11-25,Client Service Coordinator,Medium,2026-12-04,In Progress,Signed application form,2,
+SR-2026-1226,CL-1013,Mia Northcott,Address Change,2026-11-17,Hannah Brooks,Medium,2026-11-22,Completed,,2,2026-11-19
+SR-2026-1227,CL-1012,Owen Montague,Beneficiary Update,2026-11-13,Client Service Coordinator,Medium,2026-11-16,Completed,,2,2026-11-15
+SR-2026-1228,CL-1023,Zoe Yardley,Contact Information Update,2026-10-12,Priya Natarajan,Medium,2026-10-19,Completed,,2,2026-10-17
+SR-2026-1229,CL-1018,Julian Sterling,Account Maintenance,2026-10-20,Priya Natarajan,High,2026-10-24,Completed,,2,2026-10-22
+SR-2026-1230,CL-1023,Zoe Yardley,Transfer Paperwork,2026-11-11,Client Service Coordinator,High,2026-11-19,Completed,,2,2026-11-19
+SR-2026-1231,CL-1015,Harper Pemberton,Document Request,2026-10-21,Marcus Lee,Medium,2026-10-31,Completed,,2,2026-10-29
+SR-2026-1232,CL-1014,Caleb Ashby,Systematic Contribution Setup,2026-11-20,Marcus Lee,Medium,2026-11-30,Pending Client,Signed authorization form; Advisor approval,2,
+SR-2026-1233,CL-1022,Isaac Westbrook,New Account Application,2026-11-24,Client Service Coordinator,Medium,2026-11-28,Pending Home Office,Signed application form; Proof of address (mock),2,
+SR-2026-1234,CL-1002,Benjamin Calloway,Address Change,2026-11-09,Client Service Coordinator,Medium,2026-11-15,Completed,,2,2026-11-16
+SR-2026-1235,CL-1018,Julian Sterling,Beneficiary Update,2026-10-24,Client Service Coordinator,Medium,2026-10-30,Completed,,2,2026-11-01
+SR-2026-1236,CL-1004,Nathan Ellison,Contact Information Update,2026-11-21,Hannah Brooks,Medium,2026-11-27,Pending Home Office,Client verbal confirmation logged,2,
+SR-2026-1237,CL-1010,Henry Kensington,Account Maintenance,2026-11-21,Client Service Coordinator,Medium,2026-11-30,Received,Advisor review; Home office confirmation,1,
+SR-2026-1238,CL-1011,Isabel Langford,Transfer Paperwork,2026-11-19,Priya Natarajan,Medium,2026-11-23,In Progress,Signed transfer form,2,
+SR-2026-1239,CL-1005,Sofia Fairbanks,Document Request,2026-11-19,Client Service Coordinator,Medium,2026-11-25,Received,Document retrieval from archive,1,
+SR-2026-1240,CL-1015,Harper Pemberton,Systematic Contribution Setup,2026-11-09,Hannah Brooks,Medium,2026-11-16,Completed,,2,2026-11-18

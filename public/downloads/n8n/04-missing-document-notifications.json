@@ -1,0 +1,249 @@
+{
+  "name": "[DEMO] Missing document notifications",
+  "nodes": [
+    {
+      "id": "e10402f6-eaa8-44c6-bd94-caca0f3af291",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        40
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 220,
+        "content": "## Missing document notifications\n**Portfolio demonstration. Fictional test data only.**\n\nTrigger: Schedule: Mon/Wed/Fri 9:00 AM Pacific\n\n1. Replace every MOCK credential with your own *test* accounts.\n2. Replace YOUR_TEST_* IDs with test Sheets, Calendars, and Trello lists.\n3. Gmail nodes are disabled. Enable them only with a test inbox.\n4. Use \"Test: run manually\" to run with mock data.\n\nNot affiliated with any financial firm. Do not connect real client data."
+      }
+    },
+    {
+      "id": "d338e8ca-0641-49b0-9151-c2b42d55ef17",
+      "name": "Test: run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        520
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "d4d3463c-9fbb-4276-b888-26ec3a064b8f",
+      "name": "Mock test data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        520
+      ],
+      "parameters": {
+        "jsCode": "// FICTIONAL TEST DATA ONLY\nreturn [\n  { json: { 'Full Name': 'Olivia Test', Email: 'olivia.test@example.com', Phone: '805-555-0100', 'Ref #': 'SR-TEST-1201', Category: 'Address Change', Priority: 'Medium', Status: 'In Progress', 'Date Received': '2026-01-05', 'Target Date': '2026-01-09', 'Resolution Date': '', Client: 'Olivia Test', Owner: 'Coordinator', Purpose: 'Outstanding documents', 'Next Follow-up': '2026-01-08', Requirement: 'Signed form (mock)' } },\n  { json: { 'Full Name': 'Ben Sample', Email: 'ben.sample@example.com', Phone: '805-555-0101', 'Ref #': 'SR-TEST-1202', Category: 'Beneficiary Update', Priority: 'High', Status: 'Completed', 'Date Received': '2026-01-02', 'Target Date': '2026-01-06', 'Resolution Date': '2026-01-05', Client: 'Ben Sample', Owner: 'Operations', Purpose: 'Request status update', 'Next Follow-up': '2026-01-07', Requirement: 'Advisor review' } }\n];"
+      }
+    },
+    {
+      "id": "acb4b14d-a74c-46a2-a16c-ac8b38b1b2be",
+      "name": "Scheduled run",
+      "position": [
+        260,
+        300
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * 1,3,5"
+            }
+          ]
+        }
+      },
+      "notes": "Timezone: set workflow timezone to America/Los_Angeles"
+    },
+    {
+      "id": "2e4f6f68-4fa0-4fc3-875a-7df75f1bacd3",
+      "name": "Read pending requirements",
+      "position": [
+        500,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Service_Requests",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    },
+    {
+      "id": "0dd181b4-cbbe-4cfb-9cd8-c2f091cf39ef",
+      "name": "Build reminder from template",
+      "position": [
+        740,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "return $input.all().map(i => ({ json: { ...i.json,\n  subject: 'Friendly reminder: items needed to complete your request',\n  body: `Dear ${i.json['Client']},\\n\\nTo finish processing your request, we still need:\\n- ${i.json['Requirement']}\\n\\nPlease use our secure upload method. Thank you!\\n\\nClient Service Coordinator` } }));"
+      }
+    },
+    {
+      "id": "e43a0309-7250-4586-86ec-7a228a77ce62",
+      "name": "Send reminder",
+      "position": [
+        980,
+        300
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "disabled": true,
+      "parameters": {
+        "sendTo": "test-recipient@example.com",
+        "subject": "={{ $json.subject ?? 'Missing document notifications (TEST)' }}",
+        "emailType": "text",
+        "message": "={{ $json.body ?? $json.lines ?? 'Test message from portfolio demo workflow' }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GMAIL (replace with your test account)"
+        }
+      },
+      "notes": "DISABLED BY DEFAULT. Enable only with a test inbox. Never send to real clients from a demo."
+    },
+    {
+      "id": "8e778fb8-443a-4863-b33d-13a1e0f41f0a",
+      "name": "Log reminder date",
+      "position": [
+        1220,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Service_Requests",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "Ref #"
+          ]
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Scheduled run": {
+      "main": [
+        [
+          {
+            "node": "Read pending requirements",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read pending requirements": {
+      "main": [
+        [
+          {
+            "node": "Build reminder from template",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build reminder from template": {
+      "main": [
+        [
+          {
+            "node": "Send reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send reminder": {
+      "main": [
+        [
+          {
+            "node": "Log reminder date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test: run manually": {
+      "main": [
+        [
+          {
+            "node": "Mock test data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock test data": {
+      "main": [
+        [
+          {
+            "node": "Read pending requirements",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "note": "Independent portfolio demonstration by Maria Zha-Zha Cornillez Bio. Mock credentials."
+  },
+  "pinData": {}
+}

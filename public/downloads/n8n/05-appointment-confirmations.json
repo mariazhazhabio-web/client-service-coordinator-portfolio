@@ -1,0 +1,241 @@
+{
+  "name": "[DEMO] Appointment confirmations",
+  "nodes": [
+    {
+      "id": "a197f4cb-328d-43e9-af6e-7a3672835621",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        40
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 220,
+        "content": "## Appointment confirmations\n**Portfolio demonstration. Fictional test data only.**\n\nTrigger: New Google Calendar event on advisor calendar\n\n1. Replace every MOCK credential with your own *test* accounts.\n2. Replace YOUR_TEST_* IDs with test Sheets, Calendars, and Trello lists.\n3. Gmail nodes are disabled. Enable them only with a test inbox.\n4. Use \"Test: run manually\" to run with mock data.\n\nNot affiliated with any financial firm. Do not connect real client data."
+      }
+    },
+    {
+      "id": "aad681ed-0d83-4121-b729-d3755dc2165f",
+      "name": "Test: run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        520
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "8db32ee1-1da4-4cf0-af7b-ebcae57bc34d",
+      "name": "Mock test data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        520
+      ],
+      "parameters": {
+        "jsCode": "// FICTIONAL TEST DATA ONLY\nreturn [\n  { json: { 'Full Name': 'Olivia Test', Email: 'olivia.test@example.com', Phone: '805-555-0100', 'Ref #': 'SR-TEST-1201', Category: 'Address Change', Priority: 'Medium', Status: 'In Progress', 'Date Received': '2026-01-05', 'Target Date': '2026-01-09', 'Resolution Date': '', Client: 'Olivia Test', Owner: 'Coordinator', Purpose: 'Outstanding documents', 'Next Follow-up': '2026-01-08', Requirement: 'Signed form (mock)' } },\n  { json: { 'Full Name': 'Ben Sample', Email: 'ben.sample@example.com', Phone: '805-555-0101', 'Ref #': 'SR-TEST-1202', Category: 'Beneficiary Update', Priority: 'High', Status: 'Completed', 'Date Received': '2026-01-02', 'Target Date': '2026-01-06', 'Resolution Date': '2026-01-05', Client: 'Ben Sample', Owner: 'Operations', Purpose: 'Request status update', 'Next Follow-up': '2026-01-07', Requirement: 'Advisor review' } }\n];"
+      }
+    },
+    {
+      "id": "65d2369c-6bd6-4764-a0ac-087551ff383f",
+      "name": "New calendar event",
+      "position": [
+        260,
+        300
+      ],
+      "type": "n8n-nodes-base.googleCalendarTrigger",
+      "typeVersion": 1,
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "calendarId": {
+          "__rl": true,
+          "value": "YOUR_TEST_CALENDAR_ID@group.calendar.google.com",
+          "mode": "id"
+        },
+        "triggerOn": "eventCreated",
+        "options": {}
+      },
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_CALENDAR (replace)"
+        }
+      }
+    },
+    {
+      "id": "d265f803-12aa-4df9-aae8-807cfddf7ef1",
+      "name": "Convert time zones",
+      "position": [
+        500,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const fmt = (d, tz) => new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(d);\nreturn $input.all().map(i => { const start = new Date(i.json.start?.dateTime ?? i.json.start ?? Date.now());\n  return { json: { ...i.json, pacific: fmt(start, 'America/Los_Angeles'), manila: fmt(start, 'Asia/Manila') } }; });"
+      }
+    },
+    {
+      "id": "375e0a83-b329-47de-80e3-f796da8bb636",
+      "name": "Send confirmation",
+      "position": [
+        740,
+        300
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "disabled": true,
+      "parameters": {
+        "sendTo": "test-recipient@example.com",
+        "subject": "={{ $json.subject ?? 'Appointment confirmations (TEST)' }}",
+        "emailType": "text",
+        "message": "={{ $json.body ?? $json.lines ?? 'Test message from portfolio demo workflow' }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GMAIL (replace with your test account)"
+        }
+      },
+      "notes": "DISABLED BY DEFAULT. Enable only with a test inbox. Never send to real clients from a demo."
+    },
+    {
+      "id": "1bc2f1f2-759d-40ba-a014-a4e1dbe88e12",
+      "name": "Schedule 24-hour reminder",
+      "position": [
+        980,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "// In production you would use a Wait node set to 24h before start. Simulation: compute the reminder time only.\nreturn $input.all().map(i => ({ json: { ...i.json, reminderAt: new Date(new Date(i.json.start?.dateTime ?? Date.now()).getTime() - 864e5).toISOString() } }));"
+      }
+    },
+    {
+      "id": "18dae313-c820-4ee3-810c-6779e41fe4b9",
+      "name": "Log in appointment sheet",
+      "position": [
+        1220,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Appointment_Schedule",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "New calendar event": {
+      "main": [
+        [
+          {
+            "node": "Convert time zones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert time zones": {
+      "main": [
+        [
+          {
+            "node": "Send confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send confirmation": {
+      "main": [
+        [
+          {
+            "node": "Schedule 24-hour reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule 24-hour reminder": {
+      "main": [
+        [
+          {
+            "node": "Log in appointment sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test: run manually": {
+      "main": [
+        [
+          {
+            "node": "Mock test data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock test data": {
+      "main": [
+        [
+          {
+            "node": "Convert time zones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "note": "Independent portfolio demonstration by Maria Zha-Zha Cornillez Bio. Mock credentials."
+  },
+  "pinData": {}
+}

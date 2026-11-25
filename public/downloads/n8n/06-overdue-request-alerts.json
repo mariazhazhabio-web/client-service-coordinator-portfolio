@@ -1,0 +1,234 @@
+{
+  "name": "[DEMO] Overdue request alerts",
+  "nodes": [
+    {
+      "id": "f8211a02-dc8a-4f6d-be26-3b4bd1211bc3",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        40
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 220,
+        "content": "## Overdue request alerts\n**Portfolio demonstration. Fictional test data only.**\n\nTrigger: Schedule: weekdays 7:30 AM Pacific\n\n1. Replace every MOCK credential with your own *test* accounts.\n2. Replace YOUR_TEST_* IDs with test Sheets, Calendars, and Trello lists.\n3. Gmail nodes are disabled. Enable them only with a test inbox.\n4. Use \"Test: run manually\" to run with mock data.\n\nNot affiliated with any financial firm. Do not connect real client data."
+      }
+    },
+    {
+      "id": "6d5bea0e-e5bd-4013-8b87-c9b08914421c",
+      "name": "Test: run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        520
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "5172ae97-3d81-4274-af62-48e6e2363545",
+      "name": "Mock test data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        520
+      ],
+      "parameters": {
+        "jsCode": "// FICTIONAL TEST DATA ONLY\nreturn [\n  { json: { 'Full Name': 'Olivia Test', Email: 'olivia.test@example.com', Phone: '805-555-0100', 'Ref #': 'SR-TEST-1201', Category: 'Address Change', Priority: 'Medium', Status: 'In Progress', 'Date Received': '2026-01-05', 'Target Date': '2026-01-09', 'Resolution Date': '', Client: 'Olivia Test', Owner: 'Coordinator', Purpose: 'Outstanding documents', 'Next Follow-up': '2026-01-08', Requirement: 'Signed form (mock)' } },\n  { json: { 'Full Name': 'Ben Sample', Email: 'ben.sample@example.com', Phone: '805-555-0101', 'Ref #': 'SR-TEST-1202', Category: 'Beneficiary Update', Priority: 'High', Status: 'Completed', 'Date Received': '2026-01-02', 'Target Date': '2026-01-06', 'Resolution Date': '2026-01-05', Client: 'Ben Sample', Owner: 'Operations', Purpose: 'Request status update', 'Next Follow-up': '2026-01-07', Requirement: 'Advisor review' } }\n];"
+      }
+    },
+    {
+      "id": "6b28bd1a-daf5-4a8a-b543-fa94bdb9b8e1",
+      "name": "Scheduled run",
+      "position": [
+        260,
+        300
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "30 7 * * 1-5"
+            }
+          ]
+        }
+      },
+      "notes": "Timezone: set workflow timezone to America/Los_Angeles"
+    },
+    {
+      "id": "df3c1519-0149-4fc5-a8f6-d551158f95e1",
+      "name": "Read open requests",
+      "position": [
+        500,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Service_Requests",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    },
+    {
+      "id": "24834b71-e5e0-4b16-9490-3b291cc6b74a",
+      "name": "Find overdue",
+      "position": [
+        740,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const today = new Date().toISOString().slice(0, 10);\nreturn $input.all().filter(i => i.json['Status'] !== 'Completed' && String(i.json['Target Date']).slice(0, 10) < today);"
+      }
+    },
+    {
+      "id": "c6ca4609-7c46-423d-b5fd-5576385b60bb",
+      "name": "Move Trello cards",
+      "position": [
+        980,
+        300
+      ],
+      "type": "n8n-nodes-base.trello",
+      "typeVersion": 1,
+      "parameters": {
+        "resource": "label",
+        "operation": "addLabel",
+        "cardId": "={{ $json['Trello Card ID'] }}",
+        "id": "YOUR_TEST_OVERDUE_LABEL_ID"
+      },
+      "credentials": {
+        "trelloApi": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_TRELLO (replace)"
+        }
+      }
+    },
+    {
+      "id": "e191a846-f9a4-4f6a-ae28-3036211bd88d",
+      "name": "Alert operations lead",
+      "position": [
+        1220,
+        300
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "disabled": true,
+      "parameters": {
+        "sendTo": "test-recipient@example.com",
+        "subject": "={{ $json.subject ?? 'Overdue request alerts (TEST)' }}",
+        "emailType": "text",
+        "message": "={{ $json.body ?? $json.lines ?? 'Test message from portfolio demo workflow' }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GMAIL (replace with your test account)"
+        }
+      },
+      "notes": "DISABLED BY DEFAULT. Enable only with a test inbox. Never send to real clients from a demo."
+    }
+  ],
+  "connections": {
+    "Scheduled run": {
+      "main": [
+        [
+          {
+            "node": "Read open requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read open requests": {
+      "main": [
+        [
+          {
+            "node": "Find overdue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find overdue": {
+      "main": [
+        [
+          {
+            "node": "Move Trello cards",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Move Trello cards": {
+      "main": [
+        [
+          {
+            "node": "Alert operations lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test: run manually": {
+      "main": [
+        [
+          {
+            "node": "Mock test data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock test data": {
+      "main": [
+        [
+          {
+            "node": "Read open requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "note": "Independent portfolio demonstration by Maria Zha-Zha Cornillez Bio. Mock credentials."
+  },
+  "pinData": {}
+}

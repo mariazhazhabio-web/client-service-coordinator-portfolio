@@ -1,0 +1,3538 @@
+{
+  "_notice": "FICTIONAL DATA for portfolio demonstration only.",
+  "base": "2026-11-26",
+  "advisors": [
+    {
+      "id": "ADV-01",
+      "name": "Jordan Whitaker",
+      "title": "Lead Financial Advisor (fictional)",
+      "color": "#213b73"
+    },
+    {
+      "id": "ADV-02",
+      "name": "Elena Marsh",
+      "title": "Associate Financial Advisor (fictional)",
+      "color": "#b98b30"
+    },
+    {
+      "id": "ADV-03",
+      "name": "Samuel Ortiz",
+      "title": "Financial Planner (fictional)",
+      "color": "#4f6fae"
+    }
+  ],
+  "staff": [
+    {
+      "id": "ST-01",
+      "name": "Client Service Coordinator (Demo User)",
+      "role": "Client Service Coordinator"
+    },
+    {
+      "id": "ST-02",
+      "name": "Priya Natarajan",
+      "role": "Operations Associate (fictional)"
+    },
+    {
+      "id": "ST-03",
+      "name": "Marcus Lee",
+      "role": "Paraplanner (fictional)"
+    },
+    {
+      "id": "ST-04",
+      "name": "Hannah Brooks",
+      "role": "Office Administrator (fictional)"
+    }
+  ],
+  "clients": [
+    {
+      "id": "CL-1001",
+      "name": "Olivia Bennett",
+      "household": "Bennett Household",
+      "email": "olivia.bennett@example.com",
+      "phone": "(805) 555-0110",
+      "city": "Simi Valley, CA",
+      "advisorId": "ADV-01",
+      "status": "Active",
+      "segment": "Individual",
+      "accountRef": "DEMO-04000",
+      "since": "2023-04-16",
+      "lastContact": "2026-11-06",
+      "nextFollowUp": "2026-12-05",
+      "tasks": [
+        {
+          "id": "CL-1001-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-03",
+          "done": true
+        },
+        {
+          "id": "CL-1001-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-05",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-06",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-28",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-16",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1002",
+      "name": "Benjamin Calloway",
+      "household": "Calloway Household",
+      "email": "benjamin.calloway@example.com",
+      "phone": "(805) 555-0111",
+      "city": "Thousand Oaks, CA",
+      "advisorId": "ADV-02",
+      "status": "Active",
+      "segment": "Family",
+      "accountRef": "DEMO-04037",
+      "since": "2025-03-06",
+      "lastContact": "2026-10-18",
+      "nextFollowUp": "2026-12-03",
+      "tasks": [
+        {
+          "id": "CL-1002-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-01",
+          "done": false
+        },
+        {
+          "id": "CL-1002-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-03",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-18",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-09",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-09-27",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1003",
+      "name": "Grace Delgado",
+      "household": "Delgado Household",
+      "email": "grace.delgado@example.com",
+      "phone": "(805) 555-0112",
+      "city": "Moorpark, CA",
+      "advisorId": "ADV-03",
+      "status": "Active",
+      "segment": "Retiree",
+      "accountRef": "DEMO-04074",
+      "since": "2025-07-04",
+      "lastContact": "2026-10-22",
+      "nextFollowUp": "2026-12-08",
+      "tasks": [
+        {
+          "id": "CL-1003-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-06",
+          "done": true
+        },
+        {
+          "id": "CL-1003-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-08",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-22",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-13",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-01",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1004",
+      "name": "Nathan Ellison",
+      "household": "Ellison Household",
+      "email": "nathan.ellison@example.com",
+      "phone": "(805) 555-0113",
+      "city": "Camarillo, CA",
+      "advisorId": "ADV-01",
+      "status": "Active",
+      "segment": "Business Owner",
+      "accountRef": "DEMO-04111",
+      "since": "2023-03-17",
+      "lastContact": "2026-11-21",
+      "nextFollowUp": "2026-11-29",
+      "tasks": [
+        {
+          "id": "CL-1004-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-27",
+          "done": false
+        },
+        {
+          "id": "CL-1004-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-29",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-21",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-12",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-10-31",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1005",
+      "name": "Sofia Fairbanks",
+      "household": "Fairbanks Household",
+      "email": "sofia.fairbanks@example.com",
+      "phone": "(805) 555-0114",
+      "city": "Ventura, CA",
+      "advisorId": "ADV-02",
+      "status": "Onboarding",
+      "segment": "Individual",
+      "accountRef": "DEMO-04148",
+      "since": "2023-01-16",
+      "lastContact": "2026-11-13",
+      "nextFollowUp": "2026-12-14",
+      "tasks": [
+        {
+          "id": "CL-1005-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-12",
+          "done": true
+        },
+        {
+          "id": "CL-1005-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-14",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-13",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-04",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-23",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1006",
+      "name": "Ethan Garrison",
+      "household": "Garrison Household",
+      "email": "ethan.garrison@example.com",
+      "phone": "(805) 555-0115",
+      "city": "Oxnard, CA",
+      "advisorId": "ADV-03",
+      "status": "Prospect",
+      "segment": "Family",
+      "accountRef": "DEMO-04185",
+      "since": "2023-06-15",
+      "lastContact": "2026-10-20",
+      "nextFollowUp": "2026-11-24",
+      "tasks": [
+        {
+          "id": "CL-1006-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-22",
+          "done": true
+        },
+        {
+          "id": "CL-1006-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-24",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-20",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-09-29",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1007",
+      "name": "Chloe Holloway",
+      "household": "Holloway Household",
+      "email": "chloe.holloway@example.com",
+      "phone": "(805) 555-0116",
+      "city": "Westlake Village, CA",
+      "advisorId": "ADV-01",
+      "status": "Active",
+      "segment": "Retiree",
+      "accountRef": "DEMO-04222",
+      "since": "2023-03-17",
+      "lastContact": "2026-10-30",
+      "nextFollowUp": "2026-12-03",
+      "tasks": [
+        {
+          "id": "CL-1007-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-01",
+          "done": true
+        },
+        {
+          "id": "CL-1007-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-03",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-30",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-21",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-09",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1008",
+      "name": "Lucas Iverson",
+      "household": "Iverson Household",
+      "email": "lucas.iverson@example.com",
+      "phone": "(805) 555-0117",
+      "city": "Agoura Hills, CA",
+      "advisorId": "ADV-02",
+      "status": "Inactive",
+      "segment": "Business Owner",
+      "accountRef": "DEMO-04259",
+      "since": "2024-04-10",
+      "lastContact": "2026-11-10",
+      "nextFollowUp": "2026-11-28",
+      "tasks": [
+        {
+          "id": "CL-1008-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-26",
+          "done": true
+        },
+        {
+          "id": "CL-1008-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-28",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-10",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-01",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-10-20",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1009",
+      "name": "Amelia Jennings",
+      "household": "Jennings Household",
+      "email": "amelia.jennings@example.com",
+      "phone": "(805) 555-0118",
+      "city": "Simi Valley, CA",
+      "advisorId": "ADV-03",
+      "status": "Active",
+      "segment": "Individual",
+      "accountRef": "DEMO-04296",
+      "since": "2026-03-01",
+      "lastContact": "2026-11-01",
+      "nextFollowUp": "2026-12-01",
+      "tasks": [
+        {
+          "id": "CL-1009-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-29",
+          "done": true
+        },
+        {
+          "id": "CL-1009-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-01",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-01",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-23",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1010",
+      "name": "Henry Kensington",
+      "household": "Kensington Household",
+      "email": "henry.kensington@example.com",
+      "phone": "(805) 555-0119",
+      "city": "Thousand Oaks, CA",
+      "advisorId": "ADV-01",
+      "status": "Active",
+      "segment": "Family",
+      "accountRef": "DEMO-04333",
+      "since": "2022-02-20",
+      "lastContact": "2026-11-14",
+      "nextFollowUp": "2026-12-02",
+      "tasks": [
+        {
+          "id": "CL-1010-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-30",
+          "done": false
+        },
+        {
+          "id": "CL-1010-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-02",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-14",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-05",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-10-24",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1011",
+      "name": "Isabel Langford",
+      "household": "Langford Household",
+      "email": "isabel.langford@example.com",
+      "phone": "(805) 555-0120",
+      "city": "Moorpark, CA",
+      "advisorId": "ADV-02",
+      "status": "Active",
+      "segment": "Retiree",
+      "accountRef": "DEMO-04370",
+      "since": "2023-11-12",
+      "lastContact": "2026-10-28",
+      "nextFollowUp": "2026-11-30",
+      "tasks": [
+        {
+          "id": "CL-1011-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-28",
+          "done": false
+        },
+        {
+          "id": "CL-1011-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-30",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-28",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-19",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-07",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1012",
+      "name": "Owen Montague",
+      "household": "Montague Household",
+      "email": "owen.montague@example.com",
+      "phone": "(805) 555-0121",
+      "city": "Camarillo, CA",
+      "advisorId": "ADV-03",
+      "status": "Active",
+      "segment": "Business Owner",
+      "accountRef": "DEMO-04407",
+      "since": "2026-08-28",
+      "lastContact": "2026-11-25",
+      "nextFollowUp": "2026-12-01",
+      "tasks": [
+        {
+          "id": "CL-1012-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-29",
+          "done": true
+        },
+        {
+          "id": "CL-1012-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-01",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-25",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-16",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-11-04",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1013",
+      "name": "Mia Northcott",
+      "household": "Northcott Household",
+      "email": "mia.northcott@example.com",
+      "phone": "(805) 555-0122",
+      "city": "Ventura, CA",
+      "advisorId": "ADV-01",
+      "status": "Onboarding",
+      "segment": "Individual",
+      "accountRef": "DEMO-04444",
+      "since": "2024-09-07",
+      "lastContact": "2026-10-18",
+      "nextFollowUp": "2026-11-26",
+      "tasks": [
+        {
+          "id": "CL-1013-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-24",
+          "done": false
+        },
+        {
+          "id": "CL-1013-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-26",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-18",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-09",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-09-27",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1014",
+      "name": "Caleb Ashby",
+      "household": "Ashby Household",
+      "email": "caleb.ashby@example.com",
+      "phone": "(805) 555-0123",
+      "city": "Oxnard, CA",
+      "advisorId": "ADV-02",
+      "status": "Prospect",
+      "segment": "Family",
+      "accountRef": "DEMO-04481",
+      "since": "2023-08-14",
+      "lastContact": "2026-11-23",
+      "nextFollowUp": "2026-12-12",
+      "tasks": [
+        {
+          "id": "CL-1014-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-10",
+          "done": true
+        },
+        {
+          "id": "CL-1014-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-12",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-23",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-14",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-11-02",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1015",
+      "name": "Harper Pemberton",
+      "household": "Pemberton Household",
+      "email": "harper.pemberton@example.com",
+      "phone": "(805) 555-0124",
+      "city": "Westlake Village, CA",
+      "advisorId": "ADV-03",
+      "status": "Active",
+      "segment": "Retiree",
+      "accountRef": "DEMO-04518",
+      "since": "2025-04-05",
+      "lastContact": "2026-10-30",
+      "nextFollowUp": "2026-12-10",
+      "tasks": [
+        {
+          "id": "CL-1015-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-08",
+          "done": false
+        },
+        {
+          "id": "CL-1015-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-10",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-30",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-21",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-09",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1016",
+      "name": "Wyatt Quinlan",
+      "household": "Quinlan Household",
+      "email": "wyatt.quinlan@example.com",
+      "phone": "(805) 555-0125",
+      "city": "Agoura Hills, CA",
+      "advisorId": "ADV-01",
+      "status": "Inactive",
+      "segment": "Business Owner",
+      "accountRef": "DEMO-04555",
+      "since": "2025-06-04",
+      "lastContact": "2026-10-17",
+      "nextFollowUp": "2026-12-13",
+      "tasks": [
+        {
+          "id": "CL-1016-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-11",
+          "done": true
+        },
+        {
+          "id": "CL-1016-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-13",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-17",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-08",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-09-26",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1017",
+      "name": "Lily Redfield",
+      "household": "Redfield Household",
+      "email": "lily.redfield@example.com",
+      "phone": "(805) 555-0126",
+      "city": "Simi Valley, CA",
+      "advisorId": "ADV-02",
+      "status": "Active",
+      "segment": "Individual",
+      "accountRef": "DEMO-04592",
+      "since": "2025-11-01",
+      "lastContact": "2026-11-14",
+      "nextFollowUp": "2026-12-08",
+      "tasks": [
+        {
+          "id": "CL-1017-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-06",
+          "done": true
+        },
+        {
+          "id": "CL-1017-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-08",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-14",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-05",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-24",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1018",
+      "name": "Julian Sterling",
+      "household": "Sterling Household",
+      "email": "julian.sterling@example.com",
+      "phone": "(805) 555-0127",
+      "city": "Thousand Oaks, CA",
+      "advisorId": "ADV-03",
+      "status": "Active",
+      "segment": "Family",
+      "accountRef": "DEMO-04629",
+      "since": "2026-05-30",
+      "lastContact": "2026-10-28",
+      "nextFollowUp": "2026-11-30",
+      "tasks": [
+        {
+          "id": "CL-1018-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-28",
+          "done": true
+        },
+        {
+          "id": "CL-1018-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-30",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-28",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-19",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-10-07",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1019",
+      "name": "Ava Thornton",
+      "household": "Thornton Household",
+      "email": "ava.thornton@example.com",
+      "phone": "(805) 555-0128",
+      "city": "Moorpark, CA",
+      "advisorId": "ADV-01",
+      "status": "Active",
+      "segment": "Retiree",
+      "accountRef": "DEMO-04666",
+      "since": "2023-12-12",
+      "lastContact": "2026-10-24",
+      "nextFollowUp": "2026-12-02",
+      "tasks": [
+        {
+          "id": "CL-1019-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-30",
+          "done": true
+        },
+        {
+          "id": "CL-1019-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-02",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-24",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-03",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1020",
+      "name": "Gabriel Underwood",
+      "household": "Underwood Household",
+      "email": "gabriel.underwood@example.com",
+      "phone": "(805) 555-0129",
+      "city": "Camarillo, CA",
+      "advisorId": "ADV-02",
+      "status": "Active",
+      "segment": "Business Owner",
+      "accountRef": "DEMO-04703",
+      "since": "2022-10-18",
+      "lastContact": "2026-11-14",
+      "nextFollowUp": "2026-11-30",
+      "tasks": [
+        {
+          "id": "CL-1020-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-28",
+          "done": false
+        },
+        {
+          "id": "CL-1020-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-30",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-14",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-05",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-10-24",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1021",
+      "name": "Nora Vance",
+      "household": "Vance Household",
+      "email": "nora.vance@example.com",
+      "phone": "(805) 555-0130",
+      "city": "Ventura, CA",
+      "advisorId": "ADV-03",
+      "status": "Onboarding",
+      "segment": "Individual",
+      "accountRef": "DEMO-04740",
+      "since": "2026-07-29",
+      "lastContact": "2026-10-31",
+      "nextFollowUp": "2026-12-01",
+      "tasks": [
+        {
+          "id": "CL-1021-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-29",
+          "done": true
+        },
+        {
+          "id": "CL-1021-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-01",
+          "done": true
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-31",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-22",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-10",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    },
+    {
+      "id": "CL-1022",
+      "name": "Isaac Westbrook",
+      "household": "Westbrook Household",
+      "email": "isaac.westbrook@example.com",
+      "phone": "(805) 555-0131",
+      "city": "Oxnard, CA",
+      "advisorId": "ADV-01",
+      "status": "Prospect",
+      "segment": "Family",
+      "accountRef": "DEMO-04777",
+      "since": "2023-07-15",
+      "lastContact": "2026-10-20",
+      "nextFollowUp": "2026-12-04",
+      "tasks": [
+        {
+          "id": "CL-1022-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-02",
+          "done": false
+        },
+        {
+          "id": "CL-1022-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-04",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-10-20",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-09-29",
+          "type": "Meeting",
+          "summary": "Review meeting with Jordan Whitaker. Administrative follow-ups logged.",
+          "by": "Jordan Whitaker"
+        }
+      ]
+    },
+    {
+      "id": "CL-1023",
+      "name": "Zoe Yardley",
+      "household": "Yardley Household",
+      "email": "zoe.yardley@example.com",
+      "phone": "(805) 555-0132",
+      "city": "Westlake Village, CA",
+      "advisorId": "ADV-02",
+      "status": "Active",
+      "segment": "Retiree",
+      "accountRef": "DEMO-04814",
+      "since": "2022-06-20",
+      "lastContact": "2026-11-16",
+      "nextFollowUp": "2026-11-27",
+      "tasks": [
+        {
+          "id": "CL-1023-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-11-25",
+          "done": false
+        },
+        {
+          "id": "CL-1023-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-11-27",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-16",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-11-07",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-26",
+          "type": "Meeting",
+          "summary": "Review meeting with Elena Marsh. Administrative follow-ups logged.",
+          "by": "Elena Marsh"
+        }
+      ]
+    },
+    {
+      "id": "CL-1024",
+      "name": "Miles Abernathy",
+      "household": "Abernathy Household",
+      "email": "miles.abernathy@example.com",
+      "phone": "(805) 555-0133",
+      "city": "Agoura Hills, CA",
+      "advisorId": "ADV-03",
+      "status": "Inactive",
+      "segment": "Business Owner",
+      "accountRef": "DEMO-04851",
+      "since": "2023-07-15",
+      "lastContact": "2026-11-02",
+      "nextFollowUp": "2026-12-04",
+      "tasks": [
+        {
+          "id": "CL-1024-T1",
+          "title": "Send post-meeting recap email",
+          "assignee": "Client Service Coordinator",
+          "due": "2026-12-02",
+          "done": false
+        },
+        {
+          "id": "CL-1024-T2",
+          "title": "Update contact preferences in CRM",
+          "assignee": "Priya Natarajan",
+          "due": "2026-12-04",
+          "done": false
+        }
+      ],
+      "interactions": [
+        {
+          "date": "2026-11-02",
+          "type": "Call",
+          "summary": "Confirmed preferred contact method and availability for next review.",
+          "by": "Client Service Coordinator"
+        },
+        {
+          "date": "2026-10-24",
+          "type": "Email",
+          "summary": "Sent meeting recap and list of outstanding paperwork.",
+          "by": "Priya Natarajan"
+        },
+        {
+          "date": "2026-10-12",
+          "type": "Meeting",
+          "summary": "Review meeting with Samuel Ortiz. Administrative follow-ups logged.",
+          "by": "Samuel Ortiz"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "ref": "SR-2026-1201",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "New Account Application",
+      "received": "2026-11-22",
+      "assignedTo": "Marcus Lee",
+      "priority": "Medium",
+      "target": "2026-11-29",
+      "status": "Received",
+      "pending": [
+        "Signed application form",
+        "Proof of address (mock)",
+        "Client signature on disclosure acknowledgment"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-23",
+          "note": "Acknowledgment sent to client with expected timeline."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1202",
+      "clientId": "CL-1022",
+      "clientName": "Isaac Westbrook",
+      "category": "Address Change",
+      "received": "2026-11-17",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Low",
+      "target": "2026-11-21",
+      "status": "Pending Home Office",
+      "pending": [
+        "Signed address change form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-18",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-20",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1203",
+      "clientId": "CL-1019",
+      "clientName": "Ava Thornton",
+      "category": "Beneficiary Update",
+      "received": "2026-11-19",
+      "assignedTo": "Hannah Brooks",
+      "priority": "High",
+      "target": "2026-11-29",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-20",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-22",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-25"
+    },
+    {
+      "ref": "SR-2026-1204",
+      "clientId": "CL-1008",
+      "clientName": "Lucas Iverson",
+      "category": "Contact Information Update",
+      "received": "2026-10-16",
+      "assignedTo": "Marcus Lee",
+      "priority": "Medium",
+      "target": "2026-10-24",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-17",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-22"
+    },
+    {
+      "ref": "SR-2026-1205",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "Account Maintenance",
+      "received": "2026-10-19",
+      "assignedTo": "Priya Natarajan",
+      "priority": "High",
+      "target": "2026-10-24",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-20",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-22",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-26"
+    },
+    {
+      "ref": "SR-2026-1206",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "Transfer Paperwork",
+      "received": "2026-11-22",
+      "assignedTo": "Priya Natarajan",
+      "priority": "Low",
+      "target": "2026-12-02",
+      "status": "Pending Client",
+      "pending": [
+        "Signed transfer form",
+        "Recent statement copy (mock)"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-23",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-25",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1207",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Document Request",
+      "received": "2026-11-19",
+      "assignedTo": "Priya Natarajan",
+      "priority": "Low",
+      "target": "2026-11-26",
+      "status": "In Progress",
+      "pending": [
+        "Document retrieval from archive"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-20",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-22",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1208",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Systematic Contribution Setup",
+      "received": "2026-11-19",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "High",
+      "target": "2026-11-28",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-20",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-22",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-25"
+    },
+    {
+      "ref": "SR-2026-1209",
+      "clientId": "CL-1011",
+      "clientName": "Isabel Langford",
+      "category": "New Account Application",
+      "received": "2026-11-15",
+      "assignedTo": "Marcus Lee",
+      "priority": "High",
+      "target": "2026-11-20",
+      "status": "Pending Home Office",
+      "pending": [
+        "Signed application form",
+        "Proof of address (mock)"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-16",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-18",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1210",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "category": "Address Change",
+      "received": "2026-11-17",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-21",
+      "status": "In Progress",
+      "pending": [
+        "Signed address change form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-18",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-20",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1211",
+      "clientId": "CL-1018",
+      "clientName": "Julian Sterling",
+      "category": "Beneficiary Update",
+      "received": "2026-11-24",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "High",
+      "target": "2026-12-03",
+      "status": "In Progress",
+      "pending": [
+        "Signed beneficiary designation form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-25",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-27",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1212",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "Contact Information Update",
+      "received": "2026-11-16",
+      "assignedTo": "Marcus Lee",
+      "priority": "Low",
+      "target": "2026-11-23",
+      "status": "Received",
+      "pending": [
+        "Client verbal confirmation logged"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-17",
+          "note": "Acknowledgment sent to client with expected timeline."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1213",
+      "clientId": "CL-1019",
+      "clientName": "Ava Thornton",
+      "category": "Account Maintenance",
+      "received": "2026-11-17",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-25",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-18",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-20",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-25"
+    },
+    {
+      "ref": "SR-2026-1214",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "category": "Transfer Paperwork",
+      "received": "2026-11-25",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-12-03",
+      "status": "Received",
+      "pending": [
+        "Signed transfer form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-26",
+          "note": "Acknowledgment sent to client with expected timeline."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1215",
+      "clientId": "CL-1019",
+      "clientName": "Ava Thornton",
+      "category": "Document Request",
+      "received": "2026-11-23",
+      "assignedTo": "Priya Natarajan",
+      "priority": "Medium",
+      "target": "2026-12-03",
+      "status": "In Progress",
+      "pending": [
+        "Document retrieval from archive"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-24",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-26",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1216",
+      "clientId": "CL-1013",
+      "clientName": "Mia Northcott",
+      "category": "Systematic Contribution Setup",
+      "received": "2026-11-16",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-24",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-17",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-19",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-23"
+    },
+    {
+      "ref": "SR-2026-1217",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "category": "New Account Application",
+      "received": "2026-10-31",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-06",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-01",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-03",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-05"
+    },
+    {
+      "ref": "SR-2026-1218",
+      "clientId": "CL-1024",
+      "clientName": "Miles Abernathy",
+      "category": "Address Change",
+      "received": "2026-11-07",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-11-13",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-08",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-10",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-13"
+    },
+    {
+      "ref": "SR-2026-1219",
+      "clientId": "CL-1017",
+      "clientName": "Lily Redfield",
+      "category": "Beneficiary Update",
+      "received": "2026-10-12",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Low",
+      "target": "2026-10-20",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-13",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-22"
+    },
+    {
+      "ref": "SR-2026-1220",
+      "clientId": "CL-1019",
+      "clientName": "Ava Thornton",
+      "category": "Contact Information Update",
+      "received": "2026-10-12",
+      "assignedTo": "Marcus Lee",
+      "priority": "High",
+      "target": "2026-10-19",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-13",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-18"
+    },
+    {
+      "ref": "SR-2026-1221",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Account Maintenance",
+      "received": "2026-10-17",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Low",
+      "target": "2026-10-24",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-18",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-23"
+    },
+    {
+      "ref": "SR-2026-1222",
+      "clientId": "CL-1017",
+      "clientName": "Lily Redfield",
+      "category": "Transfer Paperwork",
+      "received": "2026-11-25",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-29",
+      "status": "In Progress",
+      "pending": [
+        "Signed transfer form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-26",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-28",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1223",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Document Request",
+      "received": "2026-11-18",
+      "assignedTo": "Marcus Lee",
+      "priority": "Medium",
+      "target": "2026-11-24",
+      "status": "Received",
+      "pending": [
+        "Document retrieval from archive"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-19",
+          "note": "Acknowledgment sent to client with expected timeline."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1224",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Systematic Contribution Setup",
+      "received": "2026-11-21",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Low",
+      "target": "2026-11-30",
+      "status": "In Progress",
+      "pending": [
+        "Signed authorization form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-22",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-24",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1225",
+      "clientId": "CL-1017",
+      "clientName": "Lily Redfield",
+      "category": "New Account Application",
+      "received": "2026-11-25",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-12-04",
+      "status": "In Progress",
+      "pending": [
+        "Signed application form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-26",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-28",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1226",
+      "clientId": "CL-1013",
+      "clientName": "Mia Northcott",
+      "category": "Address Change",
+      "received": "2026-11-17",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-22",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-18",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-20",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-19"
+    },
+    {
+      "ref": "SR-2026-1227",
+      "clientId": "CL-1012",
+      "clientName": "Owen Montague",
+      "category": "Beneficiary Update",
+      "received": "2026-11-13",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-11-16",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-14",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-16",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-15"
+    },
+    {
+      "ref": "SR-2026-1228",
+      "clientId": "CL-1023",
+      "clientName": "Zoe Yardley",
+      "category": "Contact Information Update",
+      "received": "2026-10-12",
+      "assignedTo": "Priya Natarajan",
+      "priority": "Medium",
+      "target": "2026-10-19",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-13",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-17"
+    },
+    {
+      "ref": "SR-2026-1229",
+      "clientId": "CL-1018",
+      "clientName": "Julian Sterling",
+      "category": "Account Maintenance",
+      "received": "2026-10-20",
+      "assignedTo": "Priya Natarajan",
+      "priority": "High",
+      "target": "2026-10-24",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-21",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-23",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-22"
+    },
+    {
+      "ref": "SR-2026-1230",
+      "clientId": "CL-1023",
+      "clientName": "Zoe Yardley",
+      "category": "Transfer Paperwork",
+      "received": "2026-11-11",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "High",
+      "target": "2026-11-19",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-12",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-14",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-19"
+    },
+    {
+      "ref": "SR-2026-1231",
+      "clientId": "CL-1015",
+      "clientName": "Harper Pemberton",
+      "category": "Document Request",
+      "received": "2026-10-21",
+      "assignedTo": "Marcus Lee",
+      "priority": "Medium",
+      "target": "2026-10-31",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-22",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-24",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-10-29"
+    },
+    {
+      "ref": "SR-2026-1232",
+      "clientId": "CL-1014",
+      "clientName": "Caleb Ashby",
+      "category": "Systematic Contribution Setup",
+      "received": "2026-11-20",
+      "assignedTo": "Marcus Lee",
+      "priority": "Medium",
+      "target": "2026-11-30",
+      "status": "Pending Client",
+      "pending": [
+        "Signed authorization form",
+        "Advisor approval"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-21",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-23",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1233",
+      "clientId": "CL-1022",
+      "clientName": "Isaac Westbrook",
+      "category": "New Account Application",
+      "received": "2026-11-24",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-11-28",
+      "status": "Pending Home Office",
+      "pending": [
+        "Signed application form",
+        "Proof of address (mock)"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-25",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-27",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1234",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Address Change",
+      "received": "2026-11-09",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-11-15",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-10",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-12",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-16"
+    },
+    {
+      "ref": "SR-2026-1235",
+      "clientId": "CL-1018",
+      "clientName": "Julian Sterling",
+      "category": "Beneficiary Update",
+      "received": "2026-10-24",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-10-30",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-10-25",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-10-27",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-01"
+    },
+    {
+      "ref": "SR-2026-1236",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Contact Information Update",
+      "received": "2026-11-21",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-27",
+      "status": "Pending Home Office",
+      "pending": [
+        "Client verbal confirmation logged"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-22",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-24",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1237",
+      "clientId": "CL-1010",
+      "clientName": "Henry Kensington",
+      "category": "Account Maintenance",
+      "received": "2026-11-21",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-11-30",
+      "status": "Received",
+      "pending": [
+        "Advisor review",
+        "Home office confirmation"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-22",
+          "note": "Acknowledgment sent to client with expected timeline."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1238",
+      "clientId": "CL-1011",
+      "clientName": "Isabel Langford",
+      "category": "Transfer Paperwork",
+      "received": "2026-11-19",
+      "assignedTo": "Priya Natarajan",
+      "priority": "Medium",
+      "target": "2026-11-23",
+      "status": "In Progress",
+      "pending": [
+        "Signed transfer form"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-20",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-22",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1239",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "category": "Document Request",
+      "received": "2026-11-19",
+      "assignedTo": "Client Service Coordinator",
+      "priority": "Medium",
+      "target": "2026-11-25",
+      "status": "Received",
+      "pending": [
+        "Document retrieval from archive"
+      ],
+      "followUps": [
+        {
+          "date": "2026-11-20",
+          "note": "Acknowledgment sent to client with expected timeline."
+        }
+      ],
+      "resolved": null
+    },
+    {
+      "ref": "SR-2026-1240",
+      "clientId": "CL-1015",
+      "clientName": "Harper Pemberton",
+      "category": "Systematic Contribution Setup",
+      "received": "2026-11-09",
+      "assignedTo": "Hannah Brooks",
+      "priority": "Medium",
+      "target": "2026-11-16",
+      "status": "Completed",
+      "pending": [],
+      "followUps": [
+        {
+          "date": "2026-11-10",
+          "note": "Acknowledgment sent to client with expected timeline."
+        },
+        {
+          "date": "2026-11-12",
+          "note": "Checked status; outstanding items confirmed with responsible party."
+        }
+      ],
+      "resolved": "2026-11-18"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "AP-001",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "type": "Discovery Meeting",
+      "date": "2026-11-18",
+      "start": "12:00",
+      "duration": 45,
+      "mode": "In-Office",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-002",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1023",
+      "clientName": "Zoe Yardley",
+      "type": "Onboarding Session",
+      "date": "2026-11-18",
+      "start": "13:00",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-003",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1015",
+      "clientName": "Harper Pemberton",
+      "type": "Onboarding Session",
+      "date": "2026-11-19",
+      "start": "13:00",
+      "duration": 30,
+      "mode": "Phone",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-004",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "type": "Discovery Meeting",
+      "date": "2026-11-19",
+      "start": "13:30",
+      "duration": 90,
+      "mode": "In-Office",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-005",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "type": "Paperwork Signing",
+      "date": "2026-11-20",
+      "start": "10:30",
+      "duration": 60,
+      "mode": "In-Office",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-006",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1010",
+      "clientName": "Henry Kensington",
+      "type": "Annual Review",
+      "date": "2026-11-20",
+      "start": "11:00",
+      "duration": 60,
+      "mode": "Phone",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-007",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1012",
+      "clientName": "Owen Montague",
+      "type": "Annual Review",
+      "date": "2026-11-23",
+      "start": "13:30",
+      "duration": 45,
+      "mode": "Video",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-008",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1021",
+      "clientName": "Nora Vance",
+      "type": "Follow-up Call",
+      "date": "2026-11-23",
+      "start": "14:30",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-009",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "type": "Discovery Meeting",
+      "date": "2026-11-24",
+      "start": "15:30",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-010",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1016",
+      "clientName": "Wyatt Quinlan",
+      "type": "Discovery Meeting",
+      "date": "2026-11-25",
+      "start": "14:00",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Completed"
+    },
+    {
+      "id": "AP-011",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1013",
+      "clientName": "Mia Northcott",
+      "type": "Planning Presentation",
+      "date": "2026-11-26",
+      "start": "08:00",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-012",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1023",
+      "clientName": "Zoe Yardley",
+      "type": "Discovery Meeting",
+      "date": "2026-11-27",
+      "start": "08:00",
+      "duration": 30,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-013",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "type": "Planning Presentation",
+      "date": "2026-11-27",
+      "start": "10:30",
+      "duration": 60,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-014",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "type": "Paperwork Signing",
+      "date": "2026-12-01",
+      "start": "16:00",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-015",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1019",
+      "clientName": "Ava Thornton",
+      "type": "Discovery Meeting",
+      "date": "2026-12-01",
+      "start": "08:00",
+      "duration": 60,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-016",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "type": "Planning Presentation",
+      "date": "2026-12-02",
+      "start": "13:00",
+      "duration": 30,
+      "mode": "In-Office",
+      "status": "Tentative"
+    },
+    {
+      "id": "AP-017",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "type": "Discovery Meeting",
+      "date": "2026-12-03",
+      "start": "13:00",
+      "duration": 90,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-018",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1016",
+      "clientName": "Wyatt Quinlan",
+      "type": "Onboarding Session",
+      "date": "2026-12-07",
+      "start": "13:30",
+      "duration": 45,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-019",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1006",
+      "clientName": "Ethan Garrison",
+      "type": "Follow-up Call",
+      "date": "2026-12-10",
+      "start": "09:00",
+      "duration": 45,
+      "mode": "In-Office",
+      "status": "Tentative"
+    },
+    {
+      "id": "AP-020",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1017",
+      "clientName": "Lily Redfield",
+      "type": "Paperwork Signing",
+      "date": "2026-12-10",
+      "start": "13:30",
+      "duration": 45,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-021",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "type": "Discovery Meeting",
+      "date": "2026-12-11",
+      "start": "11:00",
+      "duration": 60,
+      "mode": "Phone",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-022",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1012",
+      "clientName": "Owen Montague",
+      "type": "Discovery Meeting",
+      "date": "2026-12-11",
+      "start": "13:30",
+      "duration": 30,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-023",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1023",
+      "clientName": "Zoe Yardley",
+      "type": "Annual Review",
+      "date": "2026-12-15",
+      "start": "11:00",
+      "duration": 60,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-024",
+      "advisorId": "ADV-03",
+      "clientId": "CL-1013",
+      "clientName": "Mia Northcott",
+      "type": "Follow-up Call",
+      "date": "2026-12-15",
+      "start": "10:30",
+      "duration": 45,
+      "mode": "Phone",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-025",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1021",
+      "clientName": "Nora Vance",
+      "type": "Onboarding Session",
+      "date": "2026-12-18",
+      "start": "16:00",
+      "duration": 60,
+      "mode": "Phone",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-026",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1016",
+      "clientName": "Wyatt Quinlan",
+      "type": "Follow-up Call",
+      "date": "2026-12-22",
+      "start": "10:30",
+      "duration": 45,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-027",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "type": "Discovery Meeting",
+      "date": "2026-12-22",
+      "start": "16:30",
+      "duration": 90,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-028",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "type": "Planning Presentation",
+      "date": "2026-12-23",
+      "start": "15:00",
+      "duration": 90,
+      "mode": "In-Office",
+      "status": "Tentative"
+    },
+    {
+      "id": "AP-029",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1020",
+      "clientName": "Gabriel Underwood",
+      "type": "Follow-up Call",
+      "date": "2026-12-24",
+      "start": "11:00",
+      "duration": 45,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-030",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1024",
+      "clientName": "Miles Abernathy",
+      "type": "Onboarding Session",
+      "date": "2026-12-25",
+      "start": "14:30",
+      "duration": 90,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-031",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1008",
+      "clientName": "Lucas Iverson",
+      "type": "Discovery Meeting",
+      "date": "2026-12-25",
+      "start": "11:30",
+      "duration": 90,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-032",
+      "advisorId": "ADV-02",
+      "clientId": "CL-1012",
+      "clientName": "Owen Montague",
+      "type": "Onboarding Session",
+      "date": "2026-12-28",
+      "start": "12:00",
+      "duration": 60,
+      "mode": "Phone",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-033",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1019",
+      "clientName": "Ava Thornton",
+      "type": "Planning Presentation",
+      "date": "2026-12-28",
+      "start": "13:00",
+      "duration": 60,
+      "mode": "In-Office",
+      "status": "Tentative"
+    },
+    {
+      "id": "AP-034",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "type": "Follow-up Call",
+      "date": "2026-12-29",
+      "start": "14:00",
+      "duration": 45,
+      "mode": "Video",
+      "status": "Confirmed"
+    },
+    {
+      "id": "AP-035",
+      "advisorId": "ADV-01",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "type": "Annual Review",
+      "date": "2026-12-31",
+      "start": "10:30",
+      "duration": 45,
+      "mode": "In-Office",
+      "status": "Confirmed"
+    }
+  ],
+  "meetings": [
+    {
+      "id": "MT-301",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "advisorId": "ADV-01",
+      "date": "2026-11-25",
+      "type": "Annual Review",
+      "summary": "Reviewed household contact details and upcoming life events. Client asked for an updated beneficiary form and a summary of items discussed.",
+      "actions": [
+        {
+          "id": "MT-301-A1",
+          "task": "Send meeting recap email with outstanding items",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-26",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        },
+        {
+          "id": "MT-301-A2",
+          "task": "Prepare beneficiary update form",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-28",
+          "docs": [
+            "Beneficiary form (mock)"
+          ],
+          "clientDeliverable": true,
+          "done": false
+        },
+        {
+          "id": "MT-301-A3",
+          "task": "Log meeting notes and tasks in CRM",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-26",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        },
+        {
+          "id": "MT-301-A4",
+          "task": "Follow up with client on returned documents",
+          "owner": "Client Service Coordinator",
+          "due": "2026-12-02",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "MT-302",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "advisorId": "ADV-02",
+      "date": "2026-11-23",
+      "type": "Planning Presentation",
+      "summary": "Advisor presented planning materials. Client requested printed copies and will return signed forms within two weeks.",
+      "actions": [
+        {
+          "id": "MT-302-A1",
+          "task": "Send meeting recap email with outstanding items",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-24",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        },
+        {
+          "id": "MT-302-A2",
+          "task": "Mail printed planning materials",
+          "owner": "Priya Natarajan",
+          "due": "2026-11-26",
+          "docs": [
+            "Planning summary (mock)"
+          ],
+          "clientDeliverable": true,
+          "done": false
+        },
+        {
+          "id": "MT-302-A3",
+          "task": "Log meeting notes and tasks in CRM",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-24",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-302-A4",
+          "task": "Follow up with client on returned documents",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-30",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "MT-303",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "advisorId": "ADV-03",
+      "date": "2026-11-21",
+      "type": "Discovery Meeting",
+      "summary": "Introductory meeting. Client will provide onboarding documents; coordinator to send welcome packet and checklist.",
+      "actions": [
+        {
+          "id": "MT-303-A1",
+          "task": "Send meeting recap email with outstanding items",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-22",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        },
+        {
+          "id": "MT-303-A2",
+          "task": "Send welcome packet and document checklist",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-24",
+          "docs": [
+            "Welcome packet",
+            "Onboarding checklist"
+          ],
+          "clientDeliverable": true,
+          "done": false
+        },
+        {
+          "id": "MT-303-A3",
+          "task": "Log meeting notes and tasks in CRM",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-22",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-303-A4",
+          "task": "Follow up with client on returned documents",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-28",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "MT-304",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "advisorId": "ADV-01",
+      "date": "2026-11-19",
+      "type": "Paperwork Signing",
+      "summary": "Signing session for administrative paperwork. Two forms signed; one form needs a second signature.",
+      "actions": [
+        {
+          "id": "MT-304-A1",
+          "task": "Send meeting recap email with outstanding items",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-20",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-304-A2",
+          "task": "Obtain second signature",
+          "owner": "Priya Natarajan",
+          "due": "2026-11-22",
+          "docs": [
+            "Joint form (mock)"
+          ],
+          "clientDeliverable": true,
+          "done": false
+        },
+        {
+          "id": "MT-304-A3",
+          "task": "Log meeting notes and tasks in CRM",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-20",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-304-A4",
+          "task": "Follow up with client on returned documents",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-26",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "MT-305",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "advisorId": "ADV-02",
+      "date": "2026-11-17",
+      "type": "Annual Review",
+      "summary": "Annual review. Client moved recently; address change and contact update required.",
+      "actions": [
+        {
+          "id": "MT-305-A1",
+          "task": "Send meeting recap email with outstanding items",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-18",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-305-A2",
+          "task": "Process address change request",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-20",
+          "docs": [
+            "Address change form (mock)"
+          ],
+          "clientDeliverable": true,
+          "done": true
+        },
+        {
+          "id": "MT-305-A3",
+          "task": "Log meeting notes and tasks in CRM",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-18",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-305-A4",
+          "task": "Follow up with client on returned documents",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-24",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "MT-306",
+      "clientId": "CL-1006",
+      "clientName": "Ethan Garrison",
+      "advisorId": "ADV-03",
+      "date": "2026-11-15",
+      "type": "Follow-up Call",
+      "summary": "Short follow-up call to confirm outstanding items and schedule next review.",
+      "actions": [
+        {
+          "id": "MT-306-A1",
+          "task": "Send meeting recap email with outstanding items",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-16",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-306-A2",
+          "task": "Schedule next review appointment",
+          "owner": "Priya Natarajan",
+          "due": "2026-11-18",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-306-A3",
+          "task": "Log meeting notes and tasks in CRM",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-16",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": true
+        },
+        {
+          "id": "MT-306-A4",
+          "task": "Follow up with client on returned documents",
+          "owner": "Client Service Coordinator",
+          "due": "2026-11-22",
+          "docs": [],
+          "clientDeliverable": false,
+          "done": false
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-0001",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Identification (mock)",
+      "fileName": "BENNETT_Olivia_IDENTI_20261014_v2.pdf",
+      "status": "Received",
+      "version": 2,
+      "uploaded": "2026-10-14",
+      "uploadedBy": "Marcus Lee",
+      "access": "Ops Only"
+    },
+    {
+      "id": "DOC-0002",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Application Forms",
+      "fileName": "BENNETT_Olivia_APPLIC_20261016_v1.pdf",
+      "status": "Missing",
+      "version": 1,
+      "uploaded": "2026-10-16",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0003",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Account Maintenance Forms",
+      "fileName": "BENNETT_Olivia_ACCOUN_20260902_v2.pdf",
+      "status": "Missing",
+      "version": 2,
+      "uploaded": "2026-09-02",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0004",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Meeting Notes",
+      "fileName": "BENNETT_Olivia_MEETIN_20261110_v3.pdf",
+      "status": "Missing",
+      "version": 3,
+      "uploaded": "2026-11-10",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0005",
+      "clientId": "CL-1001",
+      "clientName": "Olivia Bennett",
+      "category": "Correspondence",
+      "fileName": "BENNETT_Olivia_CORRES_20261011_v2.pdf",
+      "status": "Verified",
+      "version": 2,
+      "uploaded": "2026-10-11",
+      "uploadedBy": "Client Service Coordinator",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0006",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Application Forms",
+      "fileName": "CALLOWAY_Benjamin_APPLIC_20261016_v2.pdf",
+      "status": "Missing",
+      "version": 2,
+      "uploaded": "2026-10-16",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0007",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Account Maintenance Forms",
+      "fileName": "CALLOWAY_Benjamin_ACCOUN_20260830_v2.pdf",
+      "status": "Verified",
+      "version": 2,
+      "uploaded": "2026-08-30",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0008",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Meeting Notes",
+      "fileName": "CALLOWAY_Benjamin_MEETIN_20260904_v1.pdf",
+      "status": "Verified",
+      "version": 1,
+      "uploaded": "2026-09-04",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0009",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Correspondence",
+      "fileName": "CALLOWAY_Benjamin_CORRES_20261010_v1.pdf",
+      "status": "Verified",
+      "version": 1,
+      "uploaded": "2026-10-10",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0010",
+      "clientId": "CL-1002",
+      "clientName": "Benjamin Calloway",
+      "category": "Statements (mock)",
+      "fileName": "CALLOWAY_Benjamin_STATEM_20261022_v1.pdf",
+      "status": "Verified",
+      "version": 1,
+      "uploaded": "2026-10-22",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0011",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "category": "Account Maintenance Forms",
+      "fileName": "DELGADO_Grace_ACCOUN_20260902_v1.pdf",
+      "status": "Under Review",
+      "version": 1,
+      "uploaded": "2026-09-02",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0012",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "category": "Meeting Notes",
+      "fileName": "DELGADO_Grace_MEETIN_20261009_v2.pdf",
+      "status": "Archived",
+      "version": 2,
+      "uploaded": "2026-10-09",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0013",
+      "clientId": "CL-1003",
+      "clientName": "Grace Delgado",
+      "category": "Correspondence",
+      "fileName": "DELGADO_Grace_CORRES_20261110_v3.pdf",
+      "status": "Received",
+      "version": 3,
+      "uploaded": "2026-11-10",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0014",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Meeting Notes",
+      "fileName": "ELLISON_Nathan_MEETIN_20261105_v2.pdf",
+      "status": "Verified",
+      "version": 2,
+      "uploaded": "2026-11-05",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0015",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Correspondence",
+      "fileName": "ELLISON_Nathan_CORRES_20260927_v3.pdf",
+      "status": "Received",
+      "version": 3,
+      "uploaded": "2026-09-27",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0016",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Statements (mock)",
+      "fileName": "ELLISON_Nathan_STATEM_20260919_v2.pdf",
+      "status": "Received",
+      "version": 2,
+      "uploaded": "2026-09-19",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0017",
+      "clientId": "CL-1004",
+      "clientName": "Nathan Ellison",
+      "category": "Identification (mock)",
+      "fileName": "ELLISON_Nathan_IDENTI_20260829_v2.pdf",
+      "status": "Verified",
+      "version": 2,
+      "uploaded": "2026-08-29",
+      "uploadedBy": "Client Service Coordinator",
+      "access": "Ops Only"
+    },
+    {
+      "id": "DOC-0018",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "category": "Correspondence",
+      "fileName": "FAIRBANKS_Sofia_CORRES_20261026_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-10-26",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0019",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "category": "Statements (mock)",
+      "fileName": "FAIRBANKS_Sofia_STATEM_20260921_v1.pdf",
+      "status": "Received",
+      "version": 1,
+      "uploaded": "2026-09-21",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0020",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "category": "Identification (mock)",
+      "fileName": "FAIRBANKS_Sofia_IDENTI_20261120_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-11-20",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Ops Only"
+    },
+    {
+      "id": "DOC-0021",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "category": "Application Forms",
+      "fileName": "FAIRBANKS_Sofia_APPLIC_20260928_v1.pdf",
+      "status": "Verified",
+      "version": 1,
+      "uploaded": "2026-09-28",
+      "uploadedBy": "Client Service Coordinator",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0022",
+      "clientId": "CL-1005",
+      "clientName": "Sofia Fairbanks",
+      "category": "Account Maintenance Forms",
+      "fileName": "FAIRBANKS_Sofia_ACCOUN_20261104_v3.pdf",
+      "status": "Under Review",
+      "version": 3,
+      "uploaded": "2026-11-04",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0023",
+      "clientId": "CL-1006",
+      "clientName": "Ethan Garrison",
+      "category": "Statements (mock)",
+      "fileName": "GARRISON_Ethan_STATEM_20260904_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-09-04",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0024",
+      "clientId": "CL-1006",
+      "clientName": "Ethan Garrison",
+      "category": "Identification (mock)",
+      "fileName": "GARRISON_Ethan_IDENTI_20261108_v1.pdf",
+      "status": "Archived",
+      "version": 1,
+      "uploaded": "2026-11-08",
+      "uploadedBy": "Client Service Coordinator",
+      "access": "Ops Only"
+    },
+    {
+      "id": "DOC-0025",
+      "clientId": "CL-1006",
+      "clientName": "Ethan Garrison",
+      "category": "Application Forms",
+      "fileName": "GARRISON_Ethan_APPLIC_20260912_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-09-12",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0026",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "Identification (mock)",
+      "fileName": "HOLLOWAY_Chloe_IDENTI_20260912_v3.pdf",
+      "status": "Archived",
+      "version": 3,
+      "uploaded": "2026-09-12",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Ops Only"
+    },
+    {
+      "id": "DOC-0027",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "Application Forms",
+      "fileName": "HOLLOWAY_Chloe_APPLIC_20261107_v3.pdf",
+      "status": "Archived",
+      "version": 3,
+      "uploaded": "2026-11-07",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0028",
+      "clientId": "CL-1007",
+      "clientName": "Chloe Holloway",
+      "category": "Account Maintenance Forms",
+      "fileName": "HOLLOWAY_Chloe_ACCOUN_20261013_v3.pdf",
+      "status": "Archived",
+      "version": 3,
+      "uploaded": "2026-10-13",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0029",
+      "clientId": "CL-1008",
+      "clientName": "Lucas Iverson",
+      "category": "Application Forms",
+      "fileName": "IVERSON_Lucas_APPLIC_20261109_v1.pdf",
+      "status": "Received",
+      "version": 1,
+      "uploaded": "2026-11-09",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0030",
+      "clientId": "CL-1008",
+      "clientName": "Lucas Iverson",
+      "category": "Account Maintenance Forms",
+      "fileName": "IVERSON_Lucas_ACCOUN_20261117_v2.pdf",
+      "status": "Received",
+      "version": 2,
+      "uploaded": "2026-11-17",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0031",
+      "clientId": "CL-1008",
+      "clientName": "Lucas Iverson",
+      "category": "Meeting Notes",
+      "fileName": "IVERSON_Lucas_MEETIN_20260922_v1.pdf",
+      "status": "Under Review",
+      "version": 1,
+      "uploaded": "2026-09-22",
+      "uploadedBy": "Client Service Coordinator",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0032",
+      "clientId": "CL-1008",
+      "clientName": "Lucas Iverson",
+      "category": "Correspondence",
+      "fileName": "IVERSON_Lucas_CORRES_20260909_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-09-09",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0033",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "category": "Account Maintenance Forms",
+      "fileName": "JENNINGS_Amelia_ACCOUN_20260905_v1.pdf",
+      "status": "Verified",
+      "version": 1,
+      "uploaded": "2026-09-05",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0034",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "category": "Meeting Notes",
+      "fileName": "JENNINGS_Amelia_MEETIN_20261001_v1.pdf",
+      "status": "Verified",
+      "version": 1,
+      "uploaded": "2026-10-01",
+      "uploadedBy": "Hannah Brooks",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0035",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "category": "Correspondence",
+      "fileName": "JENNINGS_Amelia_CORRES_20261023_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-10-23",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0036",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "category": "Statements (mock)",
+      "fileName": "JENNINGS_Amelia_STATEM_20261104_v1.pdf",
+      "status": "Received",
+      "version": 1,
+      "uploaded": "2026-11-04",
+      "uploadedBy": "Priya Natarajan",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0037",
+      "clientId": "CL-1009",
+      "clientName": "Amelia Jennings",
+      "category": "Identification (mock)",
+      "fileName": "JENNINGS_Amelia_IDENTI_20261025_v2.pdf",
+      "status": "Under Review",
+      "version": 2,
+      "uploaded": "2026-10-25",
+      "uploadedBy": "Marcus Lee",
+      "access": "Ops Only"
+    },
+    {
+      "id": "DOC-0038",
+      "clientId": "CL-1010",
+      "clientName": "Henry Kensington",
+      "category": "Meeting Notes",
+      "fileName": "KENSINGTON_Henry_MEETIN_20260910_v3.pdf",
+      "status": "Missing",
+      "version": 3,
+      "uploaded": "2026-09-10",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor Only"
+    },
+    {
+      "id": "DOC-0039",
+      "clientId": "CL-1010",
+      "clientName": "Henry Kensington",
+      "category": "Correspondence",
+      "fileName": "KENSINGTON_Henry_CORRES_20261031_v1.pdf",
+      "status": "Under Review",
+      "version": 1,
+      "uploaded": "2026-10-31",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0040",
+      "clientId": "CL-1010",
+      "clientName": "Henry Kensington",
+      "category": "Statements (mock)",
+      "fileName": "KENSINGTON_Henry_STATEM_20261105_v3.pdf",
+      "status": "Verified",
+      "version": 3,
+      "uploaded": "2026-11-05",
+      "uploadedBy": "Marcus Lee",
+      "access": "Advisor + Ops"
+    },
+    {
+      "id": "DOC-0041",
+      "clientId": "CL-1010",
+      "clientName": "Henry Kensington",
+      "category": "Identification (mock)",
+      "fileName": "KENSINGTON_Henry_IDENTI_20261031_v1.pdf",
+      "status": "Received",
+      "version": 1,
+      "uploaded": "2026-10-31",
+      "uploadedBy": "Marcus Lee",
+      "access": "Ops Only"
+    }
+  ],
+  "months": [
+    {
+      "month": "Dec 25",
+      "received": 57,
+      "completed": 50,
+      "overdue": 3,
+      "newClients": 6,
+      "avgTat": 5.3,
+      "onTime": 88
+    },
+    {
+      "month": "Jan 26",
+      "received": 54,
+      "completed": 46,
+      "overdue": 6,
+      "newClients": 5,
+      "avgTat": 4.8,
+      "onTime": 85
+    },
+    {
+      "month": "Feb 26",
+      "received": 56,
+      "completed": 50,
+      "overdue": 5,
+      "newClients": 2,
+      "avgTat": 5.6,
+      "onTime": 89
+    },
+    {
+      "month": "Mar 26",
+      "received": 47,
+      "completed": 38,
+      "overdue": 2,
+      "newClients": 2,
+      "avgTat": 4.8,
+      "onTime": 86
+    },
+    {
+      "month": "Apr 26",
+      "received": 42,
+      "completed": 36,
+      "overdue": 7,
+      "newClients": 6,
+      "avgTat": 6.1,
+      "onTime": 88
+    },
+    {
+      "month": "May 26",
+      "received": 52,
+      "completed": 47,
+      "overdue": 5,
+      "newClients": 7,
+      "avgTat": 5.2,
+      "onTime": 91
+    },
+    {
+      "month": "Jun 26",
+      "received": 46,
+      "completed": 38,
+      "overdue": 5,
+      "newClients": 6,
+      "avgTat": 5.7,
+      "onTime": 91
+    },
+    {
+      "month": "Jul 26",
+      "received": 54,
+      "completed": 45,
+      "overdue": 6,
+      "newClients": 7,
+      "avgTat": 4.7,
+      "onTime": 90
+    },
+    {
+      "month": "Aug 26",
+      "received": 53,
+      "completed": 45,
+      "overdue": 2,
+      "newClients": 6,
+      "avgTat": 5.5,
+      "onTime": 89
+    },
+    {
+      "month": "Sep 26",
+      "received": 48,
+      "completed": 41,
+      "overdue": 2,
+      "newClients": 2,
+      "avgTat": 3.9,
+      "onTime": 87
+    },
+    {
+      "month": "Oct 26",
+      "received": 60,
+      "completed": 54,
+      "overdue": 6,
+      "newClients": 6,
+      "avgTat": 3.5,
+      "onTime": 94
+    },
+    {
+      "month": "Nov 26",
+      "received": 57,
+      "completed": 50,
+      "overdue": 6,
+      "newClients": 4,
+      "avgTat": 4.7,
+      "onTime": 89
+    }
+  ]
+}

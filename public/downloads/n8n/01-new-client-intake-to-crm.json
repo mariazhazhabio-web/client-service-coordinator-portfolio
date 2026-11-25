@@ -1,0 +1,306 @@
+{
+  "name": "[DEMO] New client intake → CRM",
+  "nodes": [
+    {
+      "id": "7f37fbc1-038d-4372-ad14-361bfb3e64bb",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        40
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 220,
+        "content": "## New client intake → CRM\n**Portfolio demonstration. Fictional test data only.**\n\nTrigger: Google Form submission (test form)\n\n1. Replace every MOCK credential with your own *test* accounts.\n2. Replace YOUR_TEST_* IDs with test Sheets, Calendars, and Trello lists.\n3. Gmail nodes are disabled. Enable them only with a test inbox.\n4. Use \"Test: run manually\" to run with mock data.\n\nNot affiliated with any financial firm. Do not connect real client data."
+      }
+    },
+    {
+      "id": "d9b67362-3762-43f4-87e1-f9dc4c3ec95d",
+      "name": "Test: run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        520
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "6af58011-eec8-44c1-9ed2-52484eaf1e63",
+      "name": "Mock test data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        520
+      ],
+      "parameters": {
+        "jsCode": "// FICTIONAL TEST DATA ONLY\nreturn [\n  { json: { 'Full Name': 'Olivia Test', Email: 'olivia.test@example.com', Phone: '805-555-0100', 'Ref #': 'SR-TEST-1201', Category: 'Address Change', Priority: 'Medium', Status: 'In Progress', 'Date Received': '2026-01-05', 'Target Date': '2026-01-09', 'Resolution Date': '', Client: 'Olivia Test', Owner: 'Coordinator', Purpose: 'Outstanding documents', 'Next Follow-up': '2026-01-08', Requirement: 'Signed form (mock)' } },\n  { json: { 'Full Name': 'Ben Sample', Email: 'ben.sample@example.com', Phone: '805-555-0101', 'Ref #': 'SR-TEST-1202', Category: 'Beneficiary Update', Priority: 'High', Status: 'Completed', 'Date Received': '2026-01-02', 'Target Date': '2026-01-06', 'Resolution Date': '2026-01-05', Client: 'Ben Sample', Owner: 'Operations', Purpose: 'Request status update', 'Next Follow-up': '2026-01-07', Requirement: 'Advisor review' } }\n];"
+      }
+    },
+    {
+      "id": "eb7eeb8b-750b-4a19-a05a-61a3344911e0",
+      "name": "Intake form submitted",
+      "position": [
+        260,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_FORM_RESPONSES_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Form Responses 1",
+          "mode": "name"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      },
+      "notes": "Google Forms writes responses to a linked Google Sheet; this trigger watches that sheet."
+    },
+    {
+      "id": "0cb3b1b7-b155-4a91-8d53-d63a7fe4f0c0",
+      "name": "Validate & normalize",
+      "position": [
+        500,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "// Validate required fields and normalize formats (test data only)\nreturn $input.all().map(item => {\n  const j = item.json;\n  const name = String(j['Full Name'] ?? j.name ?? '').trim();\n  const email = String(j['Email'] ?? j.email ?? '').trim().toLowerCase();\n  const digits = String(j['Phone'] ?? j.phone ?? '').replace(/\\D/g, '').slice(-10);\n  const phone = digits.length === 10 ? `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}` : '';\n  const errors = [];\n  if (!name) errors.push('Missing name');\n  if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) errors.push('Invalid email');\n  return { json: { name, email, phone, advisor: j['Preferred Advisor'] ?? 'Unassigned', valid: errors.length === 0, errors, receivedAt: new Date().toISOString() } };\n});"
+      }
+    },
+    {
+      "id": "d21c55f0-68ac-47d4-9f99-dc86682edd3e",
+      "name": "Check for duplicates",
+      "position": [
+        740,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CRM_Clients",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    },
+    {
+      "id": "4534a31b-1e7e-4df1-b8a6-94002a5ca066",
+      "name": "Create CRM record",
+      "position": [
+        980,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CRM_Clients",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    },
+    {
+      "id": "9aadef58-b982-4156-bd4a-58efb65311d8",
+      "name": "Create client folder",
+      "position": [
+        1220,
+        300
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "parameters": {
+        "resource": "folder",
+        "name": "={{ 'TEST_' + ($json.name ?? 'Client') }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "YOUR_TEST_PARENT_FOLDER_ID",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_DRIVE (replace)"
+        }
+      }
+    },
+    {
+      "id": "a65e85d2-412d-459d-a92c-2e368751faed",
+      "name": "Notify coordinator",
+      "position": [
+        1460,
+        300
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "disabled": true,
+      "parameters": {
+        "sendTo": "test-recipient@example.com",
+        "subject": "={{ $json.subject ?? 'New client intake → CRM (TEST)' }}",
+        "emailType": "text",
+        "message": "={{ $json.body ?? $json.lines ?? 'Test message from portfolio demo workflow' }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GMAIL (replace with your test account)"
+        }
+      },
+      "notes": "DISABLED BY DEFAULT. Enable only with a test inbox. Never send to real clients from a demo."
+    }
+  ],
+  "connections": {
+    "Intake form submitted": {
+      "main": [
+        [
+          {
+            "node": "Validate & normalize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & normalize": {
+      "main": [
+        [
+          {
+            "node": "Check for duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check for duplicates": {
+      "main": [
+        [
+          {
+            "node": "Create CRM record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create CRM record": {
+      "main": [
+        [
+          {
+            "node": "Create client folder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create client folder": {
+      "main": [
+        [
+          {
+            "node": "Notify coordinator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test: run manually": {
+      "main": [
+        [
+          {
+            "node": "Mock test data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock test data": {
+      "main": [
+        [
+          {
+            "node": "Validate & normalize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "note": "Independent portfolio demonstration by Maria Zha-Zha Cornillez Bio. Mock credentials."
+  },
+  "pinData": {}
+}

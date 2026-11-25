@@ -1,0 +1,25 @@
+meetingId,client,date,id,task,owner,due,docs,clientDeliverable,done
+MT-301,Olivia Bennett,2026-11-25,MT-301-A1,Send meeting recap email with outstanding items,Client Service Coordinator,2026-11-26,,false,false
+MT-301,Olivia Bennett,2026-11-25,MT-301-A2,Prepare beneficiary update form,Client Service Coordinator,2026-11-28,Beneficiary form (mock),true,false
+MT-301,Olivia Bennett,2026-11-25,MT-301-A3,Log meeting notes and tasks in CRM,Client Service Coordinator,2026-11-26,,false,false
+MT-301,Olivia Bennett,2026-11-25,MT-301-A4,Follow up with client on returned documents,Client Service Coordinator,2026-12-02,,false,false
+MT-302,Benjamin Calloway,2026-11-23,MT-302-A1,Send meeting recap email with outstanding items,Client Service Coordinator,2026-11-24,,false,false
+MT-302,Benjamin Calloway,2026-11-23,MT-302-A2,Mail printed planning materials,Priya Natarajan,2026-11-26,Planning summary (mock),true,false
+MT-302,Benjamin Calloway,2026-11-23,MT-302-A3,Log meeting notes and tasks in CRM,Client Service Coordinator,2026-11-24,,false,true
+MT-302,Benjamin Calloway,2026-11-23,MT-302-A4,Follow up with client on returned documents,Client Service Coordinator,2026-11-30,,false,false
+MT-303,Grace Delgado,2026-11-21,MT-303-A1,Send meeting recap email with outstanding items,Client Service Coordinator,2026-11-22,,false,false
+MT-303,Grace Delgado,2026-11-21,MT-303-A2,Send welcome packet and document checklist,Client Service Coordinator,2026-11-24,Welcome packet; Onboarding checklist,true,false
+MT-303,Grace Delgado,2026-11-21,MT-303-A3,Log meeting notes and tasks in CRM,Client Service Coordinator,2026-11-22,,false,true
+MT-303,Grace Delgado,2026-11-21,MT-303-A4,Follow up with client on returned documents,Client Service Coordinator,2026-11-28,,false,false
+MT-304,Nathan Ellison,2026-11-19,MT-304-A1,Send meeting recap email with outstanding items,Client Service Coordinator,2026-11-20,,false,true
+MT-304,Nathan Ellison,2026-11-19,MT-304-A2,Obtain second signature,Priya Natarajan,2026-11-22,Joint form (mock),true,false
+MT-304,Nathan Ellison,2026-11-19,MT-304-A3,Log meeting notes and tasks in CRM,Client Service Coordinator,2026-11-20,,false,true
+MT-304,Nathan Ellison,2026-11-19,MT-304-A4,Follow up with client on returned documents,Client Service Coordinator,2026-11-26,,false,false
+MT-305,Sofia Fairbanks,2026-11-17,MT-305-A1,Send meeting recap email with outstanding items,Client Service Coordinator,2026-11-18,,false,true
+MT-305,Sofia Fairbanks,2026-11-17,MT-305-A2,Process address change request,Client Service Coordinator,2026-11-20,Address change form (mock),true,true
+MT-305,Sofia Fairbanks,2026-11-17,MT-305-A3,Log meeting notes and tasks in CRM,Client Service Coordinator,2026-11-18,,false,true
+MT-305,Sofia Fairbanks,2026-11-17,MT-305-A4,Follow up with client on returned documents,Client Service Coordinator,2026-11-24,,false,false
+MT-306,Ethan Garrison,2026-11-15,MT-306-A1,Send meeting recap email with outstanding items,Client Service Coordinator,2026-11-16,,false,true
+MT-306,Ethan Garrison,2026-11-15,MT-306-A2,Schedule next review appointment,Priya Natarajan,2026-11-18,,false,true
+MT-306,Ethan Garrison,2026-11-15,MT-306-A3,Log meeting notes and tasks in CRM,Client Service Coordinator,2026-11-16,,false,true
+MT-306,Ethan Garrison,2026-11-15,MT-306-A4,Follow up with client on returned documents,Client Service Coordinator,2026-11-22,,false,false

@@ -1,0 +1,243 @@
+{
+  "name": "[DEMO] Weekly performance report",
+  "nodes": [
+    {
+      "id": "5cde1b29-a1b4-402a-8916-263b13ca4232",
+      "name": "README",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        40
+      ],
+      "parameters": {
+        "width": 520,
+        "height": 220,
+        "content": "## Weekly performance report\n**Portfolio demonstration. Fictional test data only.**\n\nTrigger: Schedule: Fridays 3:00 PM Pacific\n\n1. Replace every MOCK credential with your own *test* accounts.\n2. Replace YOUR_TEST_* IDs with test Sheets, Calendars, and Trello lists.\n3. Gmail nodes are disabled. Enable them only with a test inbox.\n4. Use \"Test: run manually\" to run with mock data.\n\nNot affiliated with any financial firm. Do not connect real client data."
+      }
+    },
+    {
+      "id": "39ae5580-aa0d-4b9d-9422-647d13e95d2f",
+      "name": "Test: run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        520
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "e2f5325e-eb25-4613-8bc8-626b5613695e",
+      "name": "Mock test data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        520
+      ],
+      "parameters": {
+        "jsCode": "// FICTIONAL TEST DATA ONLY\nreturn [\n  { json: { 'Full Name': 'Olivia Test', Email: 'olivia.test@example.com', Phone: '805-555-0100', 'Ref #': 'SR-TEST-1201', Category: 'Address Change', Priority: 'Medium', Status: 'In Progress', 'Date Received': '2026-01-05', 'Target Date': '2026-01-09', 'Resolution Date': '', Client: 'Olivia Test', Owner: 'Coordinator', Purpose: 'Outstanding documents', 'Next Follow-up': '2026-01-08', Requirement: 'Signed form (mock)' } },\n  { json: { 'Full Name': 'Ben Sample', Email: 'ben.sample@example.com', Phone: '805-555-0101', 'Ref #': 'SR-TEST-1202', Category: 'Beneficiary Update', Priority: 'High', Status: 'Completed', 'Date Received': '2026-01-02', 'Target Date': '2026-01-06', 'Resolution Date': '2026-01-05', Client: 'Ben Sample', Owner: 'Operations', Purpose: 'Request status update', 'Next Follow-up': '2026-01-07', Requirement: 'Advisor review' } }\n];"
+      }
+    },
+    {
+      "id": "78e5c8f3-01a5-4fcb-9a67-12c4c8733a68",
+      "name": "Weekly schedule",
+      "position": [
+        260,
+        300
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 15 * * 5"
+            }
+          ]
+        }
+      },
+      "notes": "Timezone: set workflow timezone to America/Los_Angeles"
+    },
+    {
+      "id": "f695bafd-3233-433b-ac62-709a2466ee47",
+      "name": "Read request tracker",
+      "position": [
+        500,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_TEST_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Service_Requests",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_SHEETS (replace with your test account)"
+        }
+      }
+    },
+    {
+      "id": "59f32087-665c-49da-84e3-374080a8e8ac",
+      "name": "Calculate KPIs",
+      "position": [
+        740,
+        300
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const rows = $input.all().map(i => i.json);\nconst today = new Date().toISOString().slice(0, 10);\nconst done = rows.filter(r => r['Status'] === 'Completed');\nconst days = (a, b) => (new Date(b) - new Date(a)) / 864e5;\nconst tat = done.map(r => days(r['Date Received'], r['Resolution Date'])).filter(n => !isNaN(n));\nconst onTime = done.filter(r => r['Resolution Date'] <= r['Target Date']).length;\nreturn [{ json: {\n  total: rows.length, completed: done.length, pending: rows.length - done.length,\n  overdue: rows.filter(r => r['Status'] !== 'Completed' && r['Target Date'] < today).length,\n  avgTurnaroundDays: tat.length ? +(tat.reduce((a, b) => a + b, 0) / tat.length).toFixed(1) : 0,\n  completionRate: rows.length ? +(done.length / rows.length * 100).toFixed(1) : 0,\n  onTimeRate: done.length ? +(onTime / done.length * 100).toFixed(1) : 0,\n} }];"
+      }
+    },
+    {
+      "id": "657f6ce6-f17d-4bf3-8ee0-934e99a376c0",
+      "name": "Save report",
+      "position": [
+        980,
+        300
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "parameters": {
+        "resource": "folder",
+        "name": "={{ 'TEST_' + ($json.name ?? 'Client') }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "YOUR_TEST_PARENT_FOLDER_ID",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GOOGLE_DRIVE (replace)"
+        }
+      }
+    },
+    {
+      "id": "39a5e9ce-34a7-482f-b9fe-5c69a45328a8",
+      "name": "Email advisors",
+      "position": [
+        1220,
+        300
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "disabled": true,
+      "parameters": {
+        "sendTo": "test-recipient@example.com",
+        "subject": "={{ $json.subject ?? 'Weekly performance report (TEST)' }}",
+        "emailType": "text",
+        "message": "={{ $json.body ?? $json.lines ?? 'Test message from portfolio demo workflow' }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MOCK_CREDENTIAL_ID",
+          "name": "MOCK_GMAIL (replace with your test account)"
+        }
+      },
+      "notes": "DISABLED BY DEFAULT. Enable only with a test inbox. Never send to real clients from a demo."
+    }
+  ],
+  "connections": {
+    "Weekly schedule": {
+      "main": [
+        [
+          {
+            "node": "Read request tracker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read request tracker": {
+      "main": [
+        [
+          {
+            "node": "Calculate KPIs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate KPIs": {
+      "main": [
+        [
+          {
+            "node": "Save report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save report": {
+      "main": [
+        [
+          {
+            "node": "Email advisors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test: run manually": {
+      "main": [
+        [
+          {
+            "node": "Mock test data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock test data": {
+      "main": [
+        [
+          {
+            "node": "Read request tracker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "saveManualExecutions": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "note": "Independent portfolio demonstration by Maria Zha-Zha Cornillez Bio. Mock credentials."
+  },
+  "pinData": {}
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Headshot placeholder">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#213b73"/><stop offset="1" stop-color="#0b1730"/></linearGradient></defs>
+  <rect width="400" height="480" fill="url(#g)"/>
+  <circle cx="200" cy="185" r="78" fill="#4f6fae"/>
+  <path d="M60 480c10-110 70-165 140-165s130 55 140 165z" fill="#4f6fae"/>
+  <rect x="20" y="20" width="360" height="440" fill="none" stroke="#dcbc6c" stroke-width="2" stroke-dasharray="8 8" rx="12"/>
+  <text x="200" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#f4ead0">Replace with your photo</text>
+  <text x="200" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#adbfe0">public/images/headshot.jpg</text>
+</svg>

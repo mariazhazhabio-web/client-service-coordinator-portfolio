@@ -1,0 +1,42 @@
+id,clientId,clientName,category,fileName,status,version,uploaded,uploadedBy,access
+DOC-0001,CL-1001,Olivia Bennett,Identification (mock),BENNETT_Olivia_IDENTI_20261014_v2.pdf,Received,2,2026-10-14,Marcus Lee,Ops Only
+DOC-0002,CL-1001,Olivia Bennett,Application Forms,BENNETT_Olivia_APPLIC_20261016_v1.pdf,Missing,1,2026-10-16,Marcus Lee,Advisor + Ops
+DOC-0003,CL-1001,Olivia Bennett,Account Maintenance Forms,BENNETT_Olivia_ACCOUN_20260902_v2.pdf,Missing,2,2026-09-02,Hannah Brooks,Advisor + Ops
+DOC-0004,CL-1001,Olivia Bennett,Meeting Notes,BENNETT_Olivia_MEETIN_20261110_v3.pdf,Missing,3,2026-11-10,Hannah Brooks,Advisor Only
+DOC-0005,CL-1001,Olivia Bennett,Correspondence,BENNETT_Olivia_CORRES_20261011_v2.pdf,Verified,2,2026-10-11,Client Service Coordinator,Advisor + Ops
+DOC-0006,CL-1002,Benjamin Calloway,Application Forms,CALLOWAY_Benjamin_APPLIC_20261016_v2.pdf,Missing,2,2026-10-16,Priya Natarajan,Advisor + Ops
+DOC-0007,CL-1002,Benjamin Calloway,Account Maintenance Forms,CALLOWAY_Benjamin_ACCOUN_20260830_v2.pdf,Verified,2,2026-08-30,Priya Natarajan,Advisor + Ops
+DOC-0008,CL-1002,Benjamin Calloway,Meeting Notes,CALLOWAY_Benjamin_MEETIN_20260904_v1.pdf,Verified,1,2026-09-04,Marcus Lee,Advisor Only
+DOC-0009,CL-1002,Benjamin Calloway,Correspondence,CALLOWAY_Benjamin_CORRES_20261010_v1.pdf,Verified,1,2026-10-10,Priya Natarajan,Advisor + Ops
+DOC-0010,CL-1002,Benjamin Calloway,Statements (mock),CALLOWAY_Benjamin_STATEM_20261022_v1.pdf,Verified,1,2026-10-22,Hannah Brooks,Advisor + Ops
+DOC-0011,CL-1003,Grace Delgado,Account Maintenance Forms,DELGADO_Grace_ACCOUN_20260902_v1.pdf,Under Review,1,2026-09-02,Hannah Brooks,Advisor + Ops
+DOC-0012,CL-1003,Grace Delgado,Meeting Notes,DELGADO_Grace_MEETIN_20261009_v2.pdf,Archived,2,2026-10-09,Marcus Lee,Advisor Only
+DOC-0013,CL-1003,Grace Delgado,Correspondence,DELGADO_Grace_CORRES_20261110_v3.pdf,Received,3,2026-11-10,Priya Natarajan,Advisor + Ops
+DOC-0014,CL-1004,Nathan Ellison,Meeting Notes,ELLISON_Nathan_MEETIN_20261105_v2.pdf,Verified,2,2026-11-05,Hannah Brooks,Advisor Only
+DOC-0015,CL-1004,Nathan Ellison,Correspondence,ELLISON_Nathan_CORRES_20260927_v3.pdf,Received,3,2026-09-27,Hannah Brooks,Advisor + Ops
+DOC-0016,CL-1004,Nathan Ellison,Statements (mock),ELLISON_Nathan_STATEM_20260919_v2.pdf,Received,2,2026-09-19,Hannah Brooks,Advisor + Ops
+DOC-0017,CL-1004,Nathan Ellison,Identification (mock),ELLISON_Nathan_IDENTI_20260829_v2.pdf,Verified,2,2026-08-29,Client Service Coordinator,Ops Only
+DOC-0018,CL-1005,Sofia Fairbanks,Correspondence,FAIRBANKS_Sofia_CORRES_20261026_v3.pdf,Verified,3,2026-10-26,Marcus Lee,Advisor + Ops
+DOC-0019,CL-1005,Sofia Fairbanks,Statements (mock),FAIRBANKS_Sofia_STATEM_20260921_v1.pdf,Received,1,2026-09-21,Hannah Brooks,Advisor + Ops
+DOC-0020,CL-1005,Sofia Fairbanks,Identification (mock),FAIRBANKS_Sofia_IDENTI_20261120_v3.pdf,Verified,3,2026-11-20,Hannah Brooks,Ops Only
+DOC-0021,CL-1005,Sofia Fairbanks,Application Forms,FAIRBANKS_Sofia_APPLIC_20260928_v1.pdf,Verified,1,2026-09-28,Client Service Coordinator,Advisor + Ops
+DOC-0022,CL-1005,Sofia Fairbanks,Account Maintenance Forms,FAIRBANKS_Sofia_ACCOUN_20261104_v3.pdf,Under Review,3,2026-11-04,Priya Natarajan,Advisor + Ops
+DOC-0023,CL-1006,Ethan Garrison,Statements (mock),GARRISON_Ethan_STATEM_20260904_v3.pdf,Verified,3,2026-09-04,Hannah Brooks,Advisor + Ops
+DOC-0024,CL-1006,Ethan Garrison,Identification (mock),GARRISON_Ethan_IDENTI_20261108_v1.pdf,Archived,1,2026-11-08,Client Service Coordinator,Ops Only
+DOC-0025,CL-1006,Ethan Garrison,Application Forms,GARRISON_Ethan_APPLIC_20260912_v3.pdf,Verified,3,2026-09-12,Hannah Brooks,Advisor + Ops
+DOC-0026,CL-1007,Chloe Holloway,Identification (mock),HOLLOWAY_Chloe_IDENTI_20260912_v3.pdf,Archived,3,2026-09-12,Hannah Brooks,Ops Only
+DOC-0027,CL-1007,Chloe Holloway,Application Forms,HOLLOWAY_Chloe_APPLIC_20261107_v3.pdf,Archived,3,2026-11-07,Priya Natarajan,Advisor + Ops
+DOC-0028,CL-1007,Chloe Holloway,Account Maintenance Forms,HOLLOWAY_Chloe_ACCOUN_20261013_v3.pdf,Archived,3,2026-10-13,Marcus Lee,Advisor + Ops
+DOC-0029,CL-1008,Lucas Iverson,Application Forms,IVERSON_Lucas_APPLIC_20261109_v1.pdf,Received,1,2026-11-09,Marcus Lee,Advisor + Ops
+DOC-0030,CL-1008,Lucas Iverson,Account Maintenance Forms,IVERSON_Lucas_ACCOUN_20261117_v2.pdf,Received,2,2026-11-17,Hannah Brooks,Advisor + Ops
+DOC-0031,CL-1008,Lucas Iverson,Meeting Notes,IVERSON_Lucas_MEETIN_20260922_v1.pdf,Under Review,1,2026-09-22,Client Service Coordinator,Advisor Only
+DOC-0032,CL-1008,Lucas Iverson,Correspondence,IVERSON_Lucas_CORRES_20260909_v3.pdf,Verified,3,2026-09-09,Priya Natarajan,Advisor + Ops
+DOC-0033,CL-1009,Amelia Jennings,Account Maintenance Forms,JENNINGS_Amelia_ACCOUN_20260905_v1.pdf,Verified,1,2026-09-05,Hannah Brooks,Advisor + Ops
+DOC-0034,CL-1009,Amelia Jennings,Meeting Notes,JENNINGS_Amelia_MEETIN_20261001_v1.pdf,Verified,1,2026-10-01,Hannah Brooks,Advisor Only
+DOC-0035,CL-1009,Amelia Jennings,Correspondence,JENNINGS_Amelia_CORRES_20261023_v3.pdf,Verified,3,2026-10-23,Marcus Lee,Advisor + Ops
+DOC-0036,CL-1009,Amelia Jennings,Statements (mock),JENNINGS_Amelia_STATEM_20261104_v1.pdf,Received,1,2026-11-04,Priya Natarajan,Advisor + Ops
+DOC-0037,CL-1009,Amelia Jennings,Identification (mock),JENNINGS_Amelia_IDENTI_20261025_v2.pdf,Under Review,2,2026-10-25,Marcus Lee,Ops Only
+DOC-0038,CL-1010,Henry Kensington,Meeting Notes,KENSINGTON_Henry_MEETIN_20260910_v3.pdf,Missing,3,2026-09-10,Marcus Lee,Advisor Only
+DOC-0039,CL-1010,Henry Kensington,Correspondence,KENSINGTON_Henry_CORRES_20261031_v1.pdf,Under Review,1,2026-10-31,Marcus Lee,Advisor + Ops
+DOC-0040,CL-1010,Henry Kensington,Statements (mock),KENSINGTON_Henry_STATEM_20261105_v3.pdf,Verified,3,2026-11-05,Marcus Lee,Advisor + Ops
+DOC-0041,CL-1010,Henry Kensington,Identification (mock),KENSINGTON_Henry_IDENTI_20261031_v1.pdf,Received,1,2026-10-31,Marcus Lee,Ops Only

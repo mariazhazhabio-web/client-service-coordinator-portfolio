@@ -1,0 +1,28 @@
+/** Paths of generated files (created by scripts/generate-assets.mjs into public/downloads). */
+export const DL = {
+  resumePdf: "/downloads/application/Maria-Bio-Resume-ATS.pdf",
+  resumeDocx: "/downloads/application/Maria-Bio-Resume-ATS.docx",
+  coverPdf: "/downloads/application/Maria-Bio-Cover-Letter.pdf",
+  coverDocx: "/downloads/application/Maria-Bio-Cover-Letter.docx",
+  profilePdf: "/downloads/application/Maria-Bio-One-Page-Profile.pdf",
+  profileDocx: "/downloads/application/Maria-Bio-One-Page-Profile.docx",
+  matrixPdf: "/downloads/application/Administrative-Skills-Matrix.pdf",
+  matrixDocx: "/downloads/application/Administrative-Skills-Matrix.docx",
+  summaryPdf: "/downloads/application/Portfolio-Project-Summary.pdf",
+  summaryDocx: "/downloads/application/Portfolio-Project-Summary.docx",
+  interviewPdf: "/downloads/application/Interview-Preparation-Guide.pdf",
+  interviewDocx: "/downloads/application/Interview-Preparation-Guide.docx",
+  referencesDocx: "/downloads/application/Professional-References-Template.docx",
+  referencesPdf: "/downloads/application/Professional-References-Template.pdf",
+  planPdf: "/downloads/application/30-60-90-Day-Work-Plan.pdf",
+  planDocx: "/downloads/application/30-60-90-Day-Work-Plan.docx",
+  applicationZip: "/downloads/application/Application-Documents.zip",
+  xlsx: "/downloads/excel/Client-Service-Admin-Reporting-System.xlsx",
+  pptx: "/downloads/presentations/Client-Meeting-Presentation-Demo.pptx",
+  sopZip: "/downloads/sops/Administrative-SOPs.zip",
+  n8nZip: "/downloads/n8n/n8n-workflow-templates.zip",
+  dataJson: "/downloads/data/sample-dataset.json",
+  dataZip: "/downloads/data/sample-datasets-csv.zip",
+  everythingZip: "/downloads/Complete-Work-Samples.zip",
+};
+export const sopFile = (code: string, slug: string, ext: "docx" | "pdf") => `/downloads/sops/${code}-${slug}.${ext}`;
